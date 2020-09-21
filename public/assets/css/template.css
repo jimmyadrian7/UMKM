@@ -1,0 +1,46 @@
+/*Color*/
+.umkm-bg-green {
+	background-color: #ADC965;
+}
+.umkm-bg-cyan {
+	background-color: #89d5c9;
+}
+.umkm-bg-creme {
+	background-color: #FAC172;
+}
+.umkm-bg-orange {
+	background-color: #ff8357;
+}
+.umkm-bg-red {
+	background-color: #e25b45;
+}
+
+/*List*/
+.umkm-list {
+	cursor: pointer;
+}
+.umkm-list:hover {
+	background-color: #F7F7F7;
+}
+.umkm-list.active {
+	background-color: #E6E6E6;
+}
+
+.umkm-big-text {
+	font-size: 70px;
+	font-weight: bold;
+}
+
+.umkm-rounded {
+	border-radius: 20px;
+}
+
+.umkm-rounded .umkm-header {
+	border-radius: 20px 20px 0 0;
+}
+
+.umkm-left-navbar {
+	position: fixed;
+	border-right: 1px solid #E6E6E6;
+	height: 100%;
+}

@@ -1,0 +1,14 @@
+Color code :
+
+#ADC965 --> Green
+#89d5c9 --> Cyan
+#ff8357 --> Orange
+#E6E6E6 --> Bright Grey
+#FAC172 --> Creme
+#666666 --> Dark Grey
+#FFFFFF --> White
+
+Font-Family :
+
+Roboto --> Regular, Medium, Bold
+https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap
