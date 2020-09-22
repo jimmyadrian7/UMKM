@@ -26,6 +26,24 @@
 	background-color: #E6E6E6;
 }
 
+/*Border*/
+.umkm-border-green {
+	border: 1px solid #ADC965;
+}
+.umkm-border-creme {
+	border: 1px solid #FAC172;
+}
+
+/*Navbar*/
+.umkm-nav.active {
+	border: 1px solid #ADC965 !important;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+.no-event {
+	pointer-events: none;
+}
+
 .umkm-big-text {
 	font-size: 70px;
 	font-weight: bold;
@@ -43,4 +61,12 @@
 	position: fixed;
 	border-right: 1px solid #E6E6E6;
 	height: 100%;
+}
+
+.white-box {
+	width: 30px;
+	height: 30px;
+	border: 0;
+	background-color: white;
+	border-radius: 8px;
 }

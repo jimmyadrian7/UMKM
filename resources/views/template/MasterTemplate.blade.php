@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="{{ asset('/assets/css/template.css') }}">
 
         <!-- Script -->
-        <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('/assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('/assets/js/jquery.min.js') }}" defer="true"></script>
+        <script src="{{ asset('/assets/js/bootstrap.min.js') }}" defer="true"></script>
         
     </head>
     <body>
