@@ -2,3 +2,12 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+
+.rounded-8{
+    border-radius: 20px;
+}
+.umkm-login-footer{
+    position: absolute;
+    margin-top: 20px;
+    bottom: 0;
+}
