@@ -19,22 +19,26 @@ Route::get('/', function () {
 
 
 Route::get('/dashboard', function () {
-    return view('Dashboard');
+    $data['active'] = 'dashboard'; 
+    return view('Dashboard', $data);
 });
 
 
 Route::get('/pesanan', function () {
-    return view('Pesanan');
+    $data['active'] = 'pesanan';
+    return view('Pesanan', $data);
 });
 
 
 
 Route::get('/pengiriman', function () {
-    return view('Pengiriman');
+    $data['active'] = 'pengiriman';
+    return view('Pengiriman', $data);
 });
 
 
 
 Route::get('/akses', function () {
-    return view('Akses');
+    $data['active'] = 'akses';
+    return view('Akses', $data);
 });

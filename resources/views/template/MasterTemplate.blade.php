@@ -41,7 +41,7 @@
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-2 umkm-left-navbar">
-                    <a class="row d-flex align-items-center umkm-list text-dark active" href="/dashboard">
+                <a class="row d-flex align-items-center umkm-list text-dark {{$active == 'dashboard'? 'active':''}}" href="/dashboard">
                         <div class="col-4">
                             <img src="{{ asset('/assets/images/icon/home.png') }}" alt="Dashboard Icon" height="60">
                         </div>
@@ -49,7 +49,7 @@
                             DASHBOARD
                         </div>
                     </a>
-                    <a class="row d-flex align-items-center umkm-list text-dark" href="/pesanan">
+                    <a class="row d-flex align-items-center umkm-list text-dark {{$active == 'pesanan'? 'active':''}}" href="/pesanan">
                         <div class="col-4">
                             <img src="{{ asset('/assets/images/icon/pesanan.png') }}" alt="Dashboard Icon" height="60">
                         </div>
@@ -57,7 +57,7 @@
                             PESANAN
                         </div>
                     </a>
-                    <a class="row d-flex align-items-center umkm-list text-dark" href="/pengiriman">
+                    <a class="row d-flex align-items-center umkm-list text-dark {{$active == 'pengiriman'? 'active':''}}" href="/pengiriman">
                         <div class="col-4">
                             <img src="{{ asset('/assets/images/icon/trolley.png') }}" alt="Dashboard Icon" height="60">
                         </div>
@@ -65,7 +65,7 @@
                             PENGIRIMAN
                         </div>
                     </a>
-                    <a class="row d-flex align-items-center umkm-list text-dark" href="/akses">
+                    <a class="row d-flex align-items-center umkm-list text-dark {{$active == 'akses'? 'active':''}}" href="/akses">
                         <div class="col-4">
                             <img src="{{ asset('/assets/images/icon/user.png') }}" alt="Dashboard Icon" height="60">
                         </div>
