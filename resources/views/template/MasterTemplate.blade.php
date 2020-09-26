@@ -41,27 +41,27 @@
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-2 umkm-left-navbar">
-                <a class="row d-flex align-items-center umkm-list text-dark {{$active == 'dashboard'? 'active':''}}" href="/dashboard">
+                    <a class="row d-flex align-items-center umkm-list text-dark {{$active == 'dashboard'? 'active':''}}" href="/dashboard">
                         <div class="col-4">
-                            <img src="{{ asset('/assets/images/icon/home.png') }}" alt="Dashboard Icon" height="60">
+                            <img src="{{ asset('/assets/images/icon/home.svg') }}" alt="Dashboard Icon" height="60">
                         </div>
-                        <div class="col-8">
+                        <div class="col-8 font-weight-bold">
                             DASHBOARD
                         </div>
                     </a>
-                    <a class="row d-flex align-items-center umkm-list text-dark {{$active == 'pesanan'? 'active':''}}" href="/pesanan">
+                    <a class="row d-flex align-items-center umkm-list text-dark pt-2 {{$active == 'pesanan'? 'active':''}}" href="/pesanan">
                         <div class="col-4">
-                            <img src="{{ asset('/assets/images/icon/pesanan.png') }}" alt="Dashboard Icon" height="60">
+                            <img src="{{ asset('/assets/images/icon/pesanan.svg') }}" alt="Dashboard Icon" height="60">
                         </div>
-                        <div class="col-8">
+                        <div class="col-8 font-weight-bold">
                             PESANAN
                         </div>
                     </a>
                     <a class="row d-flex align-items-center umkm-list text-dark {{$active == 'pengiriman'? 'active':''}}" href="/pengiriman">
                         <div class="col-4">
-                            <img src="{{ asset('/assets/images/icon/trolley.png') }}" alt="Dashboard Icon" height="60">
+                            <img src="{{ asset('/assets/images/icon/trolley.svg') }}" alt="Dashboard Icon" height="60">
                         </div>
-                        <div class="col-8">
+                        <div class="col-8 font-weight-bold">
                             PENGIRIMAN
                         </div>
                     </a>
@@ -69,7 +69,7 @@
                         <div class="col-4">
                             <img src="{{ asset('/assets/images/icon/user.png') }}" alt="Dashboard Icon" height="60">
                         </div>
-                        <div class="col-8">
+                        <div class="col-8 font-weight-bold">
                             KELOLA AKSES
                         </div>
                     </a>
