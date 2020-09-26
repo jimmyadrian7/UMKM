@@ -26,3 +26,15 @@ Route::get('/dashboard', function () {
 Route::get('/pesanan', function () {
     return view('Pesanan');
 });
+
+
+
+Route::get('/pengiriman', function () {
+    return view('Pengiriman');
+});
+
+
+
+Route::get('/akses', function () {
+    return view('Akses');
+});

@@ -41,38 +41,38 @@
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-2 umkm-left-navbar">
-                    <div class="row d-flex align-items-center umkm-list active">
+                    <a class="row d-flex align-items-center umkm-list text-dark active" href="/dashboard">
                         <div class="col-4">
                             <img src="{{ asset('/assets/images/icon/home.png') }}" alt="Dashboard Icon" height="60">
                         </div>
                         <div class="col-8">
                             DASHBOARD
                         </div>
-                    </div>
-                    <div class="row d-flex align-items-center umkm-list">
+                    </a>
+                    <a class="row d-flex align-items-center umkm-list text-dark" href="/pesanan">
                         <div class="col-4">
                             <img src="{{ asset('/assets/images/icon/pesanan.png') }}" alt="Dashboard Icon" height="60">
                         </div>
                         <div class="col-8">
                             PESANAN
                         </div>
-                    </div>
-                    <div class="row d-flex align-items-center umkm-list">
+                    </a>
+                    <a class="row d-flex align-items-center umkm-list text-dark" href="/pengiriman">
                         <div class="col-4">
                             <img src="{{ asset('/assets/images/icon/trolley.png') }}" alt="Dashboard Icon" height="60">
                         </div>
                         <div class="col-8">
                             PENGIRIMAN
                         </div>
-                    </div>
-                    <div class="row d-flex align-items-center umkm-list">
+                    </a>
+                    <a class="row d-flex align-items-center umkm-list text-dark" href="/akses">
                         <div class="col-4">
                             <img src="{{ asset('/assets/images/icon/user.png') }}" alt="Dashboard Icon" height="60">
                         </div>
                         <div class="col-8">
                             KELOLA AKSES
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-md-10 px-4 py-2">
