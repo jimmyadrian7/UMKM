@@ -21,7 +21,7 @@
     <body>
         
         <nav class="navbar navbar-expand-lg umkm-bg-green d-flex justify-content-between align-items-center px-4 sticky-top">
-            <a href="navbar-brand" href="#">
+            <a href="#">
                 <img src="{{ asset('/assets/images/icon/list_rotate.png') }}" alt="hamburger list" height="40">
                 <img src="{{ asset('/assets/images/logo.png') }}" alt="logo" height="40">
             </a>
