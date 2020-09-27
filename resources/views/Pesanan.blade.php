@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <div class="mb-4 font-weight-bold">PESANAN</div>
+    <div class="mb-4 umkm-title">PESANAN</div>
 
     <div class="row">
         <div class="col-12">
@@ -116,8 +116,53 @@
                             </div>
                         </div>
                         <div class="col-sm-1 d-flex align-items-end">
-                            <button class="btn btn-default shadow rounded-pill text-uppercase px-4 umkm-border-creme">
+                            <button class="btn btn-default shadow rounded-pill text-uppercase px-4 umkm-border-creme umkm-delivery">
                                 Delivery
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 mt-4 mb-4">
+            <div class="card umkm-rounded shadow">
+                <div class="card-body p-0">
+
+                    <div class="umkm-header umkm-bg-creme text-white py-2 px-4 d-flex align-items-center">
+                        <div class="white-box mr-2">&nbsp;</div>
+                        <span>234gH79A</span>
+                    </div>
+                    
+                    <div class="row px-1 py-3 d-flex flex-wrap">
+                        <div class="col-sm-5 border-right d-flex">
+                            <div class="col-4">
+                                <img src="{{ asset('/assets/images/pixie.jpg') }}" alt="Sample Images" class="w-100">
+                            </div>
+                            <div class="col-8 text-uppercase">
+                                <div class="umkm-header">
+                                    Endang Kitchen Set
+                                </div>
+                                <div class="small text-muted">
+                                    1 Product @ Rp.99.000,-
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="card-title text-uppercase">
+                                Pembeli
+                            </div>
+                            <div class="small text-muted">
+                                Endang Sukamto <br>
+                                Jl. Kenangan 9 No. 5, Ikat Kasih <br>
+                                Jakarta 14045 <br>
+                                08765432167
+                            </div>
+                        </div>
+                        <div class="col-sm-1 d-flex align-items-end">
+                            <button class="btn btn-default shadow rounded-pill text-uppercase px-4 umkm-border-creme">
+                                Delivered
                             </button>
                         </div>
                     </div>
