@@ -116,7 +116,7 @@
                             </div>
                         </div>
                         <div class="col-sm-1 d-flex align-items-end">
-                            <button class="btn btn-default shadow rounded-pill text-uppercase px-4 umkm-border-creme umkm-delivery">
+                            <button class="btn umkm-button-creme text-uppercase px-4" data-popup="antar">
                                 Delivery
                             </button>
                         </div>
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                         <div class="col-sm-1 d-flex align-items-end">
-                            <button class="btn btn-default shadow rounded-pill text-uppercase px-4 umkm-border-creme">
+                            <button class="btn umkm-button-creme text-uppercase px-4">
                                 Delivered
                             </button>
                         </div>

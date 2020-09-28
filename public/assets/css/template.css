@@ -98,6 +98,13 @@ html, body {
 	font-size: 30px;
 }
 
+.umkm-button-creme {
+	border: 1px solid #FAC172;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+	border-radius: 50rem !important;
+	border: 1px solid #FAC172;
+}
+
 .btn.active {
 	background-color: #e1ecc7 !important;
 	border: 1px solid #63733e !important;
@@ -111,6 +118,50 @@ html, body {
 	justify-content: space-between;
 }
 
+.umkm-flex-center {
+	display: flex;
+	justify-content: center;
+}
 .umkm-flex-grow {
 	flex: 1 1 auto;
+}
+
+
+.umkm-modal {
+	background-color: transparent;
+	border: 0;
+}
+
+.umkm-popup-body {
+	border-radius: 0px 0px 20px 20px;
+	background-color: white;
+	padding: 20px;
+}
+
+/*popup*/
+.umkm-popup-header {
+	border-radius: 20px 20px 0px 0px;
+	color: white;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.umkm-select,
+.umkm-textarea {
+	width: 100%;
+	border: 1px solid gray;
+	border-radius: 20px;
+	padding: 15px;
+}
+
+.umkm-textarea {
+	resize: none;
+}
+
+.umkm-btn-green {
+	border-radius: 20px;
+	background: #ADC965;
+	color: white;
+	border: 1px solid gray;
 }

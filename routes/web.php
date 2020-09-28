@@ -30,15 +30,17 @@ Route::get('/pesanan', function () {
 });
 
 
-
 Route::get('/pengiriman', function () {
     $data['active'] = 'pengiriman';
     return view('Pengiriman', $data);
 });
 
 
-
 Route::get('/akses', function () {
     $data['active'] = 'akses';
     return view('Akses', $data);
+});
+
+Route::get('/get/popup/antar', function () {
+    return view('popup.Antar');
 });

@@ -17,6 +17,7 @@
         <!-- Script -->
         <script src="{{ asset('/assets/js/jquery.min.js') }}" defer="true"></script>
         <script src="{{ asset('/assets/js/bootstrap.min.js') }}" defer="true"></script>
+        <script src="{{ asset('/assets/js/popup.js') }}" defer="true"></script>
         
     </head>
     <body>
