@@ -1,3 +1,5 @@
+<script src="{{ asset('/assets/js/select.js') }}" defer="true"></script>
+
 <div class="umkm-popup-header umkm-bg-green">
 	Delivery Details
 </div>

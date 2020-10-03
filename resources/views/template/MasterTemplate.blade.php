@@ -12,12 +12,16 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('/assets/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/assets/css/select2.min.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/template.css') }}">
 
         <!-- Script -->
         <script src="{{ asset('/assets/js/jquery.min.js') }}" defer="true"></script>
         <script src="{{ asset('/assets/js/bootstrap.min.js') }}" defer="true"></script>
+        <script src="{{ asset('/assets/js/select2.min.js') }}" defer="true"></script>
+
         <script src="{{ asset('/assets/js/popup.js') }}" defer="true"></script>
+        {{-- <script src="{{ asset('/assets/js/select.js') }}" defer="true"></script> --}}
         
     </head>
     <body>

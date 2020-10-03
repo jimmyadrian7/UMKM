@@ -147,7 +147,7 @@ html, body {
 	align-items: center;
 }
 
-.umkm-select,
+/*.umkm-select,*/
 .umkm-textarea {
 	width: 100%;
 	border: 1px solid gray;
@@ -159,9 +159,29 @@ html, body {
 	resize: none;
 }
 
+.select2-container  {
+	display: block;
+}
+
+
+.select2-container .select2-selection {
+	border: 1px solid gray;
+	border-radius: 20px;
+	padding: 15px;
+	height: auto;
+}
+
+.select2-selection__arrow {
+	top: 15px !important;
+}
+
 .umkm-btn-green {
 	border-radius: 20px;
 	background: #ADC965;
 	color: white;
 	border: 1px solid gray;
+}
+
+[class*="umkm-btn-"]:hover {
+	color: white;
 }
