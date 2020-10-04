@@ -1,6 +1,6 @@
-<script src="{{ asset('/assets/js/select.js') }}" defer="true"></script>
+<script src="{{ asset('/assets/js/form.js') }}" defer="true"></script>
 
-<div class="umkm-popup-header umkm-bg-green">
+<div class="umkm-popup-header umkm-bg-black">
 	Delivery Details
 </div>
 
@@ -16,14 +16,16 @@
 			<textarea name="almat" id="alamat" placeholder="Alamat Pick-Up" class="umkm-textarea"></textarea>
 		</div>
 		<div class="col-10 mb-3">
-			<textarea name="tujuan" id="tujuan" placeholder="Alamat Tujuan" class="umkm-textarea"></textarea>
-			{{-- <label for="">Ongkos Kirim</label>
-			<div class="mt-2">
-				<input type="range" id="ongkos" name="ongkos" min="0" max="50000" class="w-100" value="0">
-			</div> --}}
+			<textarea name="tujuan" id="tujuan" placeholder="Alamat Pengantaran" class="umkm-textarea"></textarea>
 		</div>
+		{{-- <div class="col-10 mb-3">
+			<label for="">Ongkos Kirim</label>
+			<div class="mt-2">
+				<input type="text" id="ongkos" name="ongkos" data-min="0" data-max="50000" class="umkm-range">
+			</div>
+		</div> --}}
 		<div class="col-10 mt-3">
-			<button class="btn umkm-btn-green btn-block">Beritahu Driver</button>
+			<button class="btn umkm-btn umkm-bg-black btn-block">Beritahu Driver</button>
 		</div>
 	</div>
 </div>

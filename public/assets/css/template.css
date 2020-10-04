@@ -28,6 +28,9 @@ html, body {
 .umkm-bg-light-green {
 	background-color: #e1ecc7;
 }
+.umkm-bg-black {
+	background-color: #3a4129;
+}
 
 /*List*/
 .umkm-list {
@@ -175,13 +178,25 @@ html, body {
 	top: 15px !important;
 }
 
-.umkm-btn-green {
+.umkm-btn {
+	color: white;
 	border-radius: 20px;
-	background: #ADC965;
 	color: white;
 	border: 1px solid gray;
 }
 
-[class*="umkm-btn-"]:hover {
+.umkm-btn:hover {
 	color: white;
 }
+
+
+/*[class*="umkm-btn"] {
+	color: white;
+	border-radius: 20px;
+	color: white;
+	border: 1px solid gray;
+}
+
+[class*="umkm-btn"]:hover {
+	color: white;
+}*/
