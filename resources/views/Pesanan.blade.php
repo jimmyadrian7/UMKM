@@ -43,15 +43,15 @@
                         <div class="tab-pane fade show active" id="semua_pesanan">
                             <div class="row">
                                 <div class="col-5">
-                                    <div class="rounded-pill shadow umkm-border-green shadow d-flex p-1 align-items-center">
-                                        <img src="{{ asset('/assets/images/icon/bell.png') }}" alt="calendar icon" width="30" class="mr-2">
+                                    <div class="rounded-pill shadow umkm-border-green d-flex p-1 pl-4 align-items-center">
+                                        <i class="fa fa-calendar fa-lg"></i>
                                         <input type="text" name="tanggal" placeholder="17 Desember 2020 - 20 Desember 2020" class="form-control border-0 mr-2">
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="rounded-pill shadow umkm-border-green shadow d-flex p-1 align-items-center">
+                                    <div class="rounded-pill shadow umkm-border-green d-flex p-1 pr-4 align-items-center">
                                         <input type="text" name="tanggal" placeholder="Cari Nama Toko, Nomor Invoice..." class="form-control border-0 ml-2">
-                                        <img src="{{ asset('/assets/images/icon/bell.png') }}" alt="calendar icon" width="30" class="mr-2">
+                                        <i class="fa fa-search fa-lg"></i>
                                     </div>
                                 </div>
                             </div>
@@ -59,15 +59,15 @@
                         <div class="tab-pane fade show" id="pesanan_baru">
                             <div class="row">
                                 <div class="col-5">
-                                    <div class="rounded-pill shadow umkm-border-green shadow d-flex p-1 align-items-center">
-                                        <img src="{{ asset('/assets/images/icon/bell.png') }}" alt="calendar icon" width="30" class="mr-2">
+                                    <div class="rounded-pill shadow umkm-border-green d-flex p-1 pl-4 align-items-center">
+                                        <i class="fa fa-calendar fa-lg"></i>
                                         <input type="text" name="tanggal" placeholder="17 Desember 2020 - 20 Desember 2020" class="form-control border-0 mr-2">
                                     </div>
                                 </div>
                                 <div class="col-4">
-                                    <div class="rounded-pill shadow umkm-border-green shadow d-flex p-1 align-items-center">
+                                    <div class="rounded-pill shadow umkm-border-green d-flex p-1 pr-4 align-items-center">
                                         <input type="text" name="tanggal" placeholder="Cari Nama Toko, Nomor Invoice..." class="form-control border-0 ml-2">
-                                        <img src="{{ asset('/assets/images/icon/bell.png') }}" alt="calendar icon" width="30" class="mr-2">
+                                        <i class="fa fa-search fa-lg"></i>
                                     </div>
                                 </div>
                             </div>
@@ -85,8 +85,8 @@
             <div class="card umkm-rounded shadow">
                 <div class="card-body p-0">
 
-                    <div class="umkm-header umkm-bg-creme text-white py-2 px-4 d-flex align-items-center">
-                        <div class="white-box mr-2">&nbsp;</div>
+                    <div class="umkm-header border-bottom border-dark py-2 px-4 d-flex align-items-center">
+                        <div class="white-box mr-2 border border-dark">&nbsp;</div>
                         <span>234gH79A</span>
                     </div>
                     
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                         <div class="col-sm-1 d-flex align-items-end">
-                            <button class="btn umkm-button-creme text-uppercase px-4" data-popup="antar">
+                            <button class="btn umkm-btn umkm-bg-white text-uppercase px-4" data-popup="antar">
                                 Delivery
                             </button>
                         </div>
@@ -130,8 +130,8 @@
             <div class="card umkm-rounded shadow">
                 <div class="card-body p-0">
 
-                    <div class="umkm-header umkm-bg-creme text-white py-2 px-4 d-flex align-items-center">
-                        <div class="white-box mr-2">&nbsp;</div>
+                    <div class="umkm-header border-bottom border-dark py-2 px-4 d-flex align-items-center">
+                        <div class="white-box mr-2 border border-dark">&nbsp;</div>
                         <span>234gH79A</span>
                     </div>
                     
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                         <div class="col-sm-1 d-flex align-items-end">
-                            <button class="btn umkm-button-creme text-uppercase px-4">
+                            <button class="btn umkm-btn umkm-bg-white text-uppercase px-4">
                                 Delivered
                             </button>
                         </div>
@@ -169,6 +169,10 @@
 
                 </div>
             </div>
+        </div>
+
+        <div class="col-12 mt-4 mb-4 d-flex justify-content-center">
+          <button class="btn umkm-btn umkm-bg-white px-4 shadow">LIHAT LEBIH BANYAK</button>
         </div>
 
     </div>
