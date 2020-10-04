@@ -44,6 +44,16 @@ Route::get('/akses', function () {
     return view('Akses', $data);
 });
 
+// Popup
 Route::get('/get/popup/antar', function () {
     return view('popup.Antar');
+});
+Route::get('/get/popup/tambah_user', function () {
+    return view('popup.TambahUser');
+});
+Route::get('/get/popup/edit_user', function () {
+    return view('popup.EditUser');
+});
+Route::get('/get/popup/delete_user', function () {
+    return view('popup.DeleteUser');
 });
