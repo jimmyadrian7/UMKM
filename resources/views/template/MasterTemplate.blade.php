@@ -38,8 +38,57 @@
                 <div class="d-flex align-items-center col-4">
                     <input type="text" name="search" class="form-control rounded-pill border-0" placeholder="search...">
                 </div>
-                <div class="button-group">
-                    <button class="btn btn-default"><img src="{{ asset('/assets/images/icon/bell.png') }}" alt="bell" height="40"></button>
+                <div class="d-flex">
+                    <div class="dropdown mr-2">
+                        <button class="btn btn-default" data-toggle="dropdown" >
+                            <img src="{{ asset('/assets/images/icon/bell.png') }}" alt="bell" height="40">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right umkm-rounded p-0" style="width: 300px">
+                            <div class="umkm-header bg-dark text-white p-2 text-center">Pemberitahuan</div>
+                            <div class="card umkm-shadow">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                        <i class="fa fa-check-circle fa-3x"></i>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body px-2">
+                                            <div class="card-title small">22 Januari 2020</div>
+                                            <div class="card-text small">Pesanan ID 234 Telah Diterima!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                        <i class="fa fa-map-marker fa-3x"></i>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body p-2">
+                                            <div class="card-title small">22 Januari 2020</div>
+                                            <div class="card-text small">Kurir pickup pesanan ID 235!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                        <i class="fa fa-inbox fa-3x"></i>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body p-2">
+                                            <div class="card-title small">22 Januari 2020</div>
+                                            <div class="card-text small">Toko buah menerima pesanan baru!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- <div class="mb-3"></div> --}}
+                        </div>
+                    </div>
+
                     <button class="btn btn-default rounded-circle p-0">
                         <img src="{{ asset('/assets/images/pixie.jpg') }}" alt="profile picture" height="40" class="rounded-circle">
                     </button>
