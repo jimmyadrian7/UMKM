@@ -57,3 +57,7 @@ Route::get('/get/popup/edit_user', function () {
 Route::get('/get/popup/delete_user', function () {
     return view('popup.DeleteUser');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
