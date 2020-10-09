@@ -49878,8 +49878,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! D:\localhost\Git\UMKM\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\localhost\Git\UMKM\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\Users\jimmy\Documents\Web\umkm\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\jimmy\Documents\Web\umkm\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> 8082ca9e015ec0c32e82ec6c1be835cdd47f1b13
 
 
 /***/ })
