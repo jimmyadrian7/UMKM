@@ -14,15 +14,14 @@ class MsUser extends Migration
     public function up()
     {
         //
-        Schema::create('MsUsers', function (Blueprint $table) {
-            $table->increments('UserId');
-            $table->integer('UserId2');
+        Schema::create('MsUser', function (Blueprint $table) {
+            $table->bigIncrements('UserId');
             $table->string('UserName', 255);
             $table->string('UserEmail', 255)->unique();
-            $table->string('UserPassword')->nullable(false);
-            $table->timestamps();('JoinDate');
-            $table->enum('UserType', ['pedagang', 'pembeli', 'admin', 'kurir']);
-            $table->foreign('UserId2')->references('id')->on('users');
+            $table->string('UserPassword', 255);
+            $table->string('VerificationCode', 50);
+            $table->boolean('UserDriver');
+            $table->boolean('UserSeller');
         });
     }
 
@@ -34,6 +33,6 @@ class MsUser extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('MsUsers');
+        Schema::dropIfExists('MsUser');
     }
 }
