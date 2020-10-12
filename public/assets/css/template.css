@@ -42,6 +42,10 @@ html, body {
 	color: black !important;
 }
 
+.umkm-svg-white {
+	fill: white;
+}
+
 /*List*/
 .umkm-list {
 	cursor: pointer;
@@ -110,6 +114,10 @@ html, body {
 	font-weight: bold;
 	font-size: 40px;
 }
+.umkm-subtitle {
+	font-weight: bold;
+	font-size: 20px;
+}
 
 .btn.active {
 	background-color: #e1ecc7 !important;
@@ -122,11 +130,14 @@ html, body {
 .umkm-flex-between {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 .umkm-flex-center {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 .umkm-flex-grow {
 	flex: 1 1 auto;
@@ -199,6 +210,13 @@ html, body {
 
 .umkm-shadow {
 	box-shadow: 0 .3rem 0.1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.umkm-rounded-top {
+	border-radius: 20px 20px 0 0;
+}
+.umkm-rounded-bottom {
+	border-radius: 0 0 20px 20px;
 }
 
 /*[class*="umkm-btn"] {

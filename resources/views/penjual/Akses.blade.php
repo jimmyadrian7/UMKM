@@ -1,4 +1,4 @@
-@extends('template.MasterTemplate')
+@extends('template.PenjualTemplate')
 
 @section('content')
 

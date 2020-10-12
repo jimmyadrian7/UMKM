@@ -1,9 +1,9 @@
-@extends('template.MasterTemplate')
+@extends('template.PenjualTemplate')
 
 @section('content')
 
 
-    <div class="mb-4 umkm-title">PESANAN</div>
+    <div class="mb-4 umkm-title">PENGIRIMAN</div>
 
     <div class="row">
         <div class="col-12">

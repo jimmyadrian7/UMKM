@@ -14,16 +14,20 @@
         <link rel="stylesheet" href="{{ asset('/assets/css/font-awesome.min.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/select2.min.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/ion.rangeSlider.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/assets/DataTables/datatables..min.css') }}">
         
         <link rel="stylesheet" href="{{ asset('/assets/css/template.css') }}">
 
         <!-- Script -->
         <script src="{{ asset('/assets/js/jquery.min.js') }}" defer="true"></script>
+        <script src="{{ asset('/assets/js/popper.min.js') }}" defer="true"></script>
         <script src="{{ asset('/assets/js/bootstrap.min.js') }}" defer="true"></script>
         <script src="{{ asset('/assets/js/select2.min.js') }}" defer="true"></script>
         <script src="{{ asset('/assets/js/ion.rangeSlider.min.js') }}" defer="true"></script>
+        <script src="{{ asset('/assets/DataTables/datatables.min.js') }}" defer="true"></script>
 
         <script src="{{ asset('/assets/js/popup.js') }}" defer="true"></script>
+        <script src="{{ asset('/assets/js/data.tables.js') }}" defer="true"></script>
         
     </head>
     <body>
@@ -41,7 +45,7 @@
                 <div class="d-flex">
                     <div class="dropdown mr-2">
                         <button class="btn btn-default" data-toggle="dropdown" >
-                            <img src="{{ asset('/assets/images/icon/bell.png') }}" alt="bell" height="40">
+                            <img src="{{ asset('/assets/images/icons/alarm.svg') }}" alt="bell" height="40">
                         </button>
                         <div class="dropdown-menu dropdown-menu-right umkm-rounded p-0" style="width: 300px">
                             <div class="umkm-header bg-dark text-white p-2 text-center">Pemberitahuan</div>
@@ -95,52 +99,8 @@
                 </div>
             </nav>
 
-            <div class="row umkm-flex-grow">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-2 umkm-left-navbar mt-2">
-                    <a class="row umkm-list {{$active == 'dashboard'? 'active':''}}" href="/dashboard">
-                        <div class="col-4">
-                            {{-- <img src="{{ asset('/assets/images/icon/home.svg') }}" alt="Dashboard Icon" height="40"> --}}
-                            <i class="fa fa-home fa-3x"></i>
-                        </div>
-                        <div class="col-8 font-weight-bold">
-                            DASHBOARD
-                        </div>
-                    </a>
-                    <a class="row umkm-list pt-2 {{$active == 'pesanan'? 'active':''}}" href="/pesanan">
-                        <div class="col-4">
-                            <img src="{{ asset('/assets/images/icon/pesanan.svg') }}" alt="Pesanan Icon" height="40">
-                        </div>
-                        <div class="col-8 font-weight-bold">
-                            PESANAN
-                        </div>
-                    </a>
-                    <a class="row umkm-list {{$active == 'pengiriman'? 'active':''}}" href="/pengiriman">
-                        <div class="col-4">
-                            {{-- <img src="{{ asset('/assets/images/icon/trolley.svg') }}" alt="Pengiriman Icon" height="40"> --}}
-                            <i class="fa fa-paper-plane fa-3x"></i>
-                        </div>
-                        <div class="col-8 font-weight-bold">
-                            PENGIRIMAN
-                        </div>
-                    </a>
-                    <a class="row umkm-list {{$active == 'akses'? 'active':''}}" href="/akses">
-                        <div class="col-4">
-                            {{-- <img src="{{ asset('/assets/images/icon/user.png') }}" alt="Akses Icon" height="40"> --}}
-                            <i class="fa fa-users fa-3x"></i>
-                        </div>
-                        <div class="col-8 font-weight-bold">
-                            KELOLA AKSES
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-10 px-4 py-2 umkm-bg-light-green h-100">
-                    @yield('content')
-                </div>
-
-            </div>
+            @yield('Parentcontent')
+            
         </div>
 
     </body>

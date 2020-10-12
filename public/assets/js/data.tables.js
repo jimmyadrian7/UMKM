@@ -1,0 +1,5 @@
+$(function(){
+
+	$('.umkm-table').DataTable();
+
+});

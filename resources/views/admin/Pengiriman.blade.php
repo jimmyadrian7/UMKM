@@ -1,4 +1,4 @@
-@extends('template.MasterTemplate')
+@extends('template.AdminTemplate')
 
 @section('content')
 
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                         <div class="col-sm-1 d-flex align-items-end">
-                            <button class="btn umkm-btn umkm-bg-white text-uppercase px-4" data-popup="antar">
+                            <button class="btn umkm-btn umkm-bg-white text-uppercase px-4" data-popup="admin/antar">
                                 Delivery
                             </button>
                         </div>

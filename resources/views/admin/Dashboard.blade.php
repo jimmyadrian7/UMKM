@@ -1,4 +1,4 @@
-@extends('template.MasterTemplate')
+@extends('template.AdminTemplate')
 
 @section('content')
 
@@ -6,7 +6,7 @@
     <div class="mb-3 umkm-title">DASHBOARD</div>
 
     <div class="row">
-        <div class="col-4">
+        <div class="col-sm-4 mb-3 mb-sm-0">
             <div class="card umkm-rounded shadow">
                 <div class="card-body text-center p-0">
                     <div class="umkm-header border-bottom border-dark font-weight-bold py-2">
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-sm-4 mb-3 mb-sm-0">
             <div class="card umkm-rounded shadow">
                 <div class="card-body text-center p-0">
                     <div class="umkm-header border-bottom border-dark font-weight-bold py-2">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-sm-4 mb-3 mb-sm-0">
             <div class="card umkm-rounded shadow">
                 <div class="card-body text-center p-0">
                     <div class="umkm-header border-bottom border-dark font-weight-bold py-2">
@@ -41,17 +41,17 @@
     <div class="row mt-4">
         <div class="col-12">
             <div class="card umkm-rounded shadow">
-                <div class="card-body p-0">
-                    <div class="umkm-header py-3 px-4">
+                <div class="card-body py-3 px-4">
+                    <div class="umkm-header">
                         <div class="umkm-flex-between">
                             <div>PESANAN BARU</div>
-                            <div>
+                            {{-- <div>
                                 <i class="fa fa-print fa-lg mr-2"></i>
                                 <input type="text" name="cari" placeholder="cari...." class="pl-2">
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
-                    <table class="table table-borderless">
+                    <table class="table table-borderless umkm-table">
                         <thead class="border-bottom border-dark">
                             <th class="pl-5">Order ID</th>
                             <th class="text-center">Kategori</th>
@@ -85,7 +85,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="col-12 umkm-flex-between align-items-center mb-4 px-5">
+                    {{-- <div class="col-12 umkm-flex-between align-items-center mb-4 px-5">
                         <div class="small">Showing 1 to 20 of 20 entries</div>
                         <div class="btn-group">
                             <button class="btn btn-sm border border-dark rounded-0"><i class="fa fa-angle-double-left"></i></button>
@@ -93,7 +93,7 @@
                             <button class="btn btn-sm border border-dark rounded-0">2</button>
                             <button class="btn btn-sm border border-dark rounded-0"><i class="fa fa-angle-double-right"></i></button>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
