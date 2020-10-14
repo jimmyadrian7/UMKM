@@ -20,8 +20,8 @@ class MsUser extends Migration
             $table->string('UserEmail', 255)->unique();
             $table->string('UserPassword', 255);
             $table->string('VerificationCode', 50);
-            $table->boolean('UserDriver');
-            $table->boolean('UserSeller');
+            $table->enum('UserDriver', ['Active', 'Pending','Inactive', 'Determinate']);
+            $table->enum('UserSeller', ['Active', 'Pending','Inactive', 'Determinate']);
         });
     }
 
