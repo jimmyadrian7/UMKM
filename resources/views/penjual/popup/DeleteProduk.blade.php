@@ -1,8 +1,3 @@
-{{-- <div class="umkm-popup-header umkm-bg-black">
-	&nbsp;
-</div> --}}
-
-
 <div class="bg-white umkm-rounded pb-4">
 	<div class="row umkm-flex-center">
 		<div class="col-9 mt-5 mb-2 text-center font-weight-bold">

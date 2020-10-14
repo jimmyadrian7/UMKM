@@ -78,19 +78,22 @@ Route::prefix('penjual')->group(function () {
     });
 
 
-    Route::get('/pengiriman', function () {
-        $data['active'] = 'pengiriman';
-        return view('penjual.Pengiriman', $data);
+    Route::get('/penjualan', function () {
+        $data['active'] = 'penjualan';
+        return view('penjual.Penjualan', $data);
     });
 
 
-    Route::get('/akses', function () {
-        $data['active'] = 'akses';
-        return view('penjual.Akses', $data);
+    Route::get('/pengaturan', function () {
+        $data['active'] = 'pengaturan';
+        return view('penjual.Pengaturan', $data);
     });
 });
 Route::get('/get/popup/penjual/delete_produk', function () {
     return view('penjual.popup.DeleteProduk');
+});
+Route::get('/get/popup/penjualan/terima_pesanan', function () {
+    return view('penjual.popup.TerimaPesanan');
 });
 
 Auth::routes();

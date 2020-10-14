@@ -22,15 +22,15 @@
                     PRODUK
                 </div>
             </a>
-            <a class="row umkm-list {{$active == 'pengiriman'? 'active':''}}" href="/penjual/pengiriman">
+            <a class="row umkm-list {{$active == 'penjualan'? 'active':''}}" href="/penjual/penjualan">
                 <div class="col-4">
-                    <img src="{{ asset('/assets/images/icons/paper-plane-1.svg') }}" alt="Pengiriman Icon" height="40">
+                    <img src="{{ asset('/assets/images/icons/paper-plane-1.svg') }}" alt="Penjualan Icon" height="40">
                 </div>
                 <div class="col-8 font-weight-bold">
                     PENJUALAN
                 </div>
             </a>
-            <a class="row umkm-list {{$active == 'akses'? 'active':''}}" href="/penjual/akses">
+            <a class="row umkm-list {{$active == 'pengaturan'? 'active':''}}" href="/penjual/pengaturan">
                 <div class="col-4">
                     <img src="{{ asset('/assets/images/icons/settings-5.svg') }}" alt="Settings Icon" height="40">
                 </div>
