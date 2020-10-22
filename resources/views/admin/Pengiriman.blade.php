@@ -42,13 +42,13 @@
                     <div class="tab-content mb-3">
                         <div class="tab-pane fade show active" id="semua_pesanan">
                             <div class="row">
-                                <div class="col-5">
+                                <div class="col-lg-5 mb-3 mb-lg-0">
                                     <div class="rounded-pill shadow umkm-border-green d-flex p-1 pl-4 align-items-center">
                                         <i class="fa fa-calendar fa-lg"></i>
                                         <input type="text" name="tanggal" placeholder="17 Desember 2020 - 20 Desember 2020" class="form-control border-0 mr-2">
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-lg-4">
                                     <div class="rounded-pill shadow umkm-border-green d-flex p-1 pr-4 align-items-center">
                                         <input type="text" name="tanggal" placeholder="Cari Nama Toko, Nomor Invoice..." class="form-control border-0 ml-2">
                                         <i class="fa fa-search fa-lg"></i>
@@ -91,11 +91,11 @@
                     </div>
                     
                     <div class="row px-1 py-3 d-flex flex-wrap">
-                        <div class="col-sm-5 border-right d-flex">
-                            <div class="col-4">
+                        <div class="col-sm-5 col-md-4 col-lg-5 border-right d-flex mb-3 mb-sm-0">
+                            <div class="col-4 d-lg-block d-none">
                                 <img src="{{ asset('/assets/images/pixie.jpg') }}" alt="Sample Images" class="w-100">
                             </div>
-                            <div class="col-8 text-uppercase">
+                            <div class="col-lg-8 text-uppercase">
                                 <div class="umkm-header">
                                     Endang Kitchen Set
                                 </div>
@@ -104,21 +104,25 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-5">
-                            <div class="card-title text-uppercase">
-                                Pembeli
-                            </div>
-                            <div class="small text-muted">
-                                Endang Sukamto <br>
-                                Jl. Kenangan 9 No. 5, Ikat Kasih <br>
-                                Jakarta 14045 <br>
-                                08765432167
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="col-12">
+                                <div class="km-header">
+                                    PEMBELI
+                                </div>
+                                <div class="small text-muted">
+                                    Endang Sukamto <br>
+                                    Jl. Kenangan 9 No. 5, Ikat Kasih <br>
+                                    Jakarta 14045 <br>
+                                    08765432167
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-1 d-flex align-items-end">
-                            <button class="btn umkm-btn umkm-bg-white text-uppercase px-4" data-popup="admin/antar">
-                                Delivery
-                            </button>
+                        <div class="col-sm-12 col-md-4 col-lg-3 d-flex align-items-end">
+                            <div class="col-12 text-right">
+                                <button class="btn umkm-btn-white px-4" data-popup="admin/antar">
+                                    DELIVERY
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -136,11 +140,11 @@
                     </div>
                     
                     <div class="row px-1 py-3 d-flex flex-wrap">
-                        <div class="col-sm-5 border-right d-flex">
-                            <div class="col-4">
+                        <div class="col-sm-5 col-md-4 col-lg-5 border-right d-flex mb-3 mb-sm-0">
+                            <div class="col-4 d-lg-block d-none">
                                 <img src="{{ asset('/assets/images/pixie.jpg') }}" alt="Sample Images" class="w-100">
                             </div>
-                            <div class="col-8 text-uppercase">
+                            <div class="col-lg-8 text-uppercase">
                                 <div class="umkm-header">
                                     Endang Kitchen Set
                                 </div>
@@ -149,21 +153,25 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-5">
-                            <div class="card-title text-uppercase">
-                                Pembeli
-                            </div>
-                            <div class="small text-muted">
-                                Endang Sukamto <br>
-                                Jl. Kenangan 9 No. 5, Ikat Kasih <br>
-                                Jakarta 14045 <br>
-                                08765432167
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="col-12">
+                                <div class="km-header">
+                                    PEMBELI
+                                </div>
+                                <div class="small text-muted">
+                                    Endang Sukamto <br>
+                                    Jl. Kenangan 9 No. 5, Ikat Kasih <br>
+                                    Jakarta 14045 <br>
+                                    08765432167
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-1 d-flex align-items-end">
-                            <button class="btn umkm-btn umkm-bg-white text-uppercase px-4">
-                                Delivered
-                            </button>
+                        <div class="col-sm-12 col-md-4 col-lg-3 d-flex align-items-end">
+                            <div class="col-12 text-right">
+                                <button class="btn umkm-btn-white px-4 disabled">
+                                    DELIVERED
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -172,7 +180,7 @@
         </div>
 
         <div class="col-12 mt-4 mb-4 d-flex justify-content-center">
-          <button class="btn umkm-btn umkm-bg-white px-4 shadow">LIHAT LEBIH BANYAK</button>
+          <button class="btn umkm-btn umkm-btn-white px-4 shadow">LIHAT LEBIH BANYAK</button>
         </div>
 
     </div>

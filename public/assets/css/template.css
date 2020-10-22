@@ -96,6 +96,10 @@ html, body {
 	border-radius: 20px 20px 0 0;
 }
 
+.umkm-rounded .umkm-footer {
+	border-radius: 0px 0px 20px 20px;
+}
+
 .umkm-left-navbar {
 	position: fixed;
 	border-right: 1px solid #E6E6E6;
@@ -139,6 +143,7 @@ html, body {
 	justify-content: center;
 	flex-wrap: wrap;
 }
+
 .umkm-flex-grow {
 	flex: 1 1 auto;
 }
@@ -191,7 +196,7 @@ html, body {
 	top: 15px !important;
 }
 
-.umkm-btn {
+/*.umkm-btn {
 	color: white;
 	border-radius: 50rem !important;
 	color: white;
@@ -200,6 +205,39 @@ html, body {
 
 .umkm-btn:hover {
 	color: white;
+}*/
+
+[class*="umkm-btn"] {
+	border-radius: 50rem !important;
+}
+
+.umkm-btn-white {
+	background-color: white;
+	color: black;
+	border: 1px solid gray;
+}
+.umkm-btn-white:hover {
+	background-color: #e6e6e6;
+	color: black;
+}
+.umkm-btn-white:active {
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+}
+
+.umkm-btn-black {
+	background-color: black;
+	color: white;
+	border: 1px solid gray;
+}
+.umkm-btn-black:hover {
+	background-color: #e6e6e6;
+	color: black;
+}
+.umkm-btn-black:active {
+	background-color: white;
+	color: black;
 }
 
 .dropdown .card {
@@ -219,13 +257,11 @@ html, body {
 	border-radius: 0 0 20px 20px;
 }
 
-/*[class*="umkm-btn"] {
-	color: white;
-	border-radius: 20px;
-	color: white;
-	border: 1px solid gray;
+.umkm-border-btm-dark {
+	border: 0;
+	border-bottom: 1px solid black;
 }
 
-[class*="umkm-btn"]:hover {
-	color: white;
-}*/
+.bold {
+	font-weight: bold;
+}

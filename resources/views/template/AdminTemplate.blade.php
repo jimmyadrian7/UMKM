@@ -3,9 +3,9 @@
 @section('Parentcontent')
 
     <div class="row umkm-flex-grow">
-        <div class="col-md-2">
+        <div class="col-md-3 col-lg-2">
         </div>
-        <div class="col-md-2 umkm-left-navbar mt-2">
+        <div class="col-md-3 col-lg-2 umkm-left-navbar mt-2">
             <a class="row umkm-list {{$active == 'dashboard'? 'active':''}}" href="/admin/dashboard">
                 <div class="col-4">
     				<img src="{{ asset('/assets/images/icons/home.svg') }}" height="40"/>
@@ -41,7 +41,7 @@
             </a>
         </div>
 
-        <div class="col-md-10 px-4 py-2 umkm-bg-light-green h-100">
+        <div class="col-md-9 col-lg-10 px-4 py-2 umkm-bg-light-green h-100">
             @yield('content')
         </div>
     </div>

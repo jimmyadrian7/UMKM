@@ -7,15 +7,23 @@
     <div class="mb-4 umkm-subtitle">Tambah Produk</div>
 
     <div class="row">
-        <div class="col-12">
-            
+        <form class="col-12" action="/penjual/produk/{{$data->ProductId ?? ''}}" method="POST">
+            @csrf
+            @method($mode)
+            {{-- invisible input --}}
+            <input type="hidden" class="form-control" name="StoreId" value="2">
+            <input type="hidden" class="form-control" name="ProductId" value="{{$data->ProductId ?? ''}}">
+
+
             <div class="card umkm-rounded shadow mb-4">
                 <div class="card-body">
 
                     <div class="font-weight-bold h4 mt-3">Upload Produk</div>
                     <div class="text-danger small font-weight-bold">*Wajib</div>
 
-                    <div class="col-12 mt-3">
+                    <input type="text" class="form-control" name="StoreImage" placeholder="boi, sementara dulu :)" value="{{$data->StoreImage ?? ''}}">
+
+                    {{-- <div class="col-12 mt-3">
                         <img src="{{ asset('/assets/images/sock.jpg') }}" alt="5 Packs Socks" height="80">
                     </div>
 
@@ -24,7 +32,7 @@
                            <i class="fa fa-plus"></i>
                            Tambah Gambar
                        </a>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -40,7 +48,7 @@
                             Nama Produk
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="ProductName" value="{{$data->ProductName ?? ''}}">
                         </div>
                     </div>
                     <div class="mt-4 row">
@@ -48,7 +56,15 @@
                             Kategori
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control">
+                            {{-- <input type="text" class="form-control" name="CategoryId"> --}}
+                            <select class="form-control" name="CategoryId">
+                                <option value=""></option>
+                                @foreach ($categories as $category)
+                                    <option value="{{$category->CategoryId}}" {{ ($data->CategoryId ?? '') == $category->CategoryId ? 'selected' : '' }}>
+                                        {{$category->CategoryName}}
+                                    </option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="mt-4 row">
@@ -56,7 +72,7 @@
                             Deskripsi Produk
                         </div>
                         <div class="col-sm-8">
-                            <textarea class="form-control"></textarea>
+                            <textarea class="form-control" name="ProductDesc">{{$data->ProductDesc ?? ''}}</textarea>
                         </div>
                     </div>
                     <div class="mt-4 row">
@@ -69,7 +85,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text bg-dark text-white">Rp</div>
                                 </div>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="ProductPrice" value="{{$data->ProductPrice ?? ''}}">
                             </div>
                         </div>
                     </div>
@@ -78,7 +94,15 @@
                             Stok Produk
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="ProductStock" value="{{$data->ProductStock ?? ''}}">
+                        </div>
+                    </div>
+                    <div class="mt-4 row">
+                        <div class="col-sm-4">
+                            Berat Produk
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="ProductWeight" value="{{$data->ProductWeight ?? ''}}">
                         </div>
                     </div>
 
@@ -88,10 +112,10 @@
             </div>
             <div class="col-12 mb-5 text-right">
                 <button class="btn btn-dark px-4">Batal</button>
-                <button class="btn btn-dark px-4">Simpan</button>
+                <button type="submit" class="btn btn-dark px-4">Simpan</button>
             </div>
 
-        </div>
+        </form>
     </div>
 
 @endsection

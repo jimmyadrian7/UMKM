@@ -9,7 +9,7 @@
         <div class="col-sm-4 mb-3 mb-sm-0">
             <div class="card umkm-rounded shadow">
                 <div class="card-body text-center p-0">
-                    <div class="umkm-header border-bottom border-dark font-weight-bold py-2">
+                    <div class="umkm-header umkm-border-btm-dark bold py-2">
                         PESANAN BARU
                     </div>
                     <div class="umkm-big-text p-3">23</div>
@@ -19,7 +19,7 @@
         <div class="col-sm-4 mb-3 mb-sm-0">
             <div class="card umkm-rounded shadow">
                 <div class="card-body text-center p-0">
-                    <div class="umkm-header border-bottom border-dark font-weight-bold py-2">
+                    <div class="umkm-header umkm-border-btm-dark bold py-2">
                         PESANAN DIKIRIM
                     </div>
                     <div class="umkm-big-text p-3">23</div>
@@ -29,7 +29,7 @@
         <div class="col-sm-4 mb-3 mb-sm-0">
             <div class="card umkm-rounded shadow">
                 <div class="card-body text-center p-0">
-                    <div class="umkm-header border-bottom border-dark font-weight-bold py-2">
+                    <div class="umkm-header umkm-border-btm-dark bold py-2">
                         PESANAN SELESAI
                     </div>
                     <div class="umkm-big-text p-3">23</div>
@@ -44,7 +44,7 @@
                 <div class="card-body py-3 px-4">
                     <div class="umkm-header">
                         <div class="umkm-flex-between">
-                            <div>PESANAN BARU</div>
+                            <div class="bold mb-3">PESANAN BARU</div>
                             {{-- <div>
                                 <i class="fa fa-print fa-lg mr-2"></i>
                                 <input type="text" name="cari" placeholder="cari...." class="pl-2">
@@ -149,10 +149,10 @@
                     <div class="col-12 umkm-flex-between align-items-center mb-4 px-5">
                         <div class="small">Showing 1 to 20 of 20 entries</div>
                         <div class="btn-group">
-                            <button class="btn btn-sm border border-dark rounded-0"><i class="fa fa-angle-double-left"></i></button>
-                            <button class="btn btn-sm border border-dark active rounded-0">1</button>
-                            <button class="btn btn-sm border border-dark rounded-0">2</button>
-                            <button class="btn btn-sm border border-dark rounded-0"><i class="fa fa-angle-double-right"></i></button>
+                            <button class="btn btn-sm border-dark rounded-0"><i class="fa fa-angle-double-left"></i></button>
+                            <button class="btn btn-sm border-dark active rounded-0">1</button>
+                            <button class="btn btn-sm border-dark rounded-0">2</button>
+                            <button class="btn btn-sm border-dark rounded-0"><i class="fa fa-angle-double-right"></i></button>
                         </div>
                     </div>
                 </div>
