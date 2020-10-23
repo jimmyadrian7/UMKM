@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,3 +100,6 @@ Route::get('/get/popup/penjualan/terima_pesanan', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/encrypt/{id}', [HomeController::class, 'encrypt'])->name('encrypt');
+Route::get('/decrypt/{id}', [HomeController::class, 'decrypt'])->name('decrypt');
