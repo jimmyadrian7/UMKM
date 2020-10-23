@@ -69,14 +69,15 @@ Route::prefix('penjual')->group(function () {
     });
 
 
-    Route::get('/produk', function () {
-        $data['active'] = 'produk';
-        return view('penjual.Produk', $data);
-    });
-    Route::get('/produk/tambah', function () {
-        $data['active'] = 'produk';
-        return view('penjual.ProdukTambah', $data);
-    });
+    // Route::get('/produk', function () {
+    //     $data['active'] = 'produk';
+    //     return view('penjual.Produk', $data);
+    // });
+    // Route::get('/produk/tambah', function () {
+    //     $data['active'] = 'produk';
+    //     return view('penjual.ProdukTambah', $data);
+    // });
+    Route::resource('/produk', 'ProductController');
 
 
     Route::get('/penjualan', function () {
@@ -90,8 +91,8 @@ Route::prefix('penjual')->group(function () {
         return view('penjual.Pengaturan', $data);
     });
 });
-Route::get('/get/popup/penjual/delete_produk', function () {
-    return view('penjual.popup.DeleteProduk');
+Route::get('/get/popup/penjual/delete_produk/{id}', function ($id) {
+    return view('penjual.popup.DeleteProduk', ['id' => $id]);
 });
 Route::get('/get/popup/penjualan/terima_pesanan', function () {
     return view('penjual.popup.TerimaPesanan');

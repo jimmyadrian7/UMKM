@@ -6,7 +6,11 @@
 			<div class="font-weight-normal">Penghapusan produk tidak dapat dibatalkan</div>
 		</div>
 		<div class="col-9 mb-3 umkm-flex-between">
-			<button class="btn umkm-btn umkm-bg-black px-5">HAPUS</button>
+			<form action="/penjual/produk/{{$id}}" method="POST">
+				@csrf
+				@method('DELETE')
+				<button type="submit" class="btn umkm-btn umkm-bg-black px-5">HAPUS</button>
+			</form>
 			<button class="btn umkm-btn umkm-bg-black px-5" >CANCEL</button>
 		</div>
 	</div>

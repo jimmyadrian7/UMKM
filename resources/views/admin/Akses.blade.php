@@ -4,7 +4,7 @@
 
     <div class="mb-4 umkm-title">KELOLA AKSES</div>
 
-	<button class="btn umkm-btn umkm-bg-white px-4 mb-4" data-popup="admin/tambah_user">Tambah User</button>
+	<button class="btn umkm-btn umkm-btn-white px-4 mb-4 shadow" data-popup="admin/tambah_user">Tambah User</button>
 
 	<div class="card umkm-rounded shadow mb-3">
         <div class="card-body p-0">

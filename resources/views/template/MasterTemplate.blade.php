@@ -51,7 +51,7 @@
                             <div class="umkm-header bg-dark text-white p-2 text-center">Pemberitahuan</div>
                             <div class="card umkm-shadow">
                                 <div class="row no-gutters">
-                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                    <div class="col-md-3 d-flex umkm-flex-center align-items-center">
                                         <i class="fa fa-check-circle fa-3x"></i>
                                     </div>
                                     <div class="col-md-9">
@@ -64,7 +64,7 @@
                             </div>
                             <div class="card">
                                 <div class="row no-gutters">
-                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                    <div class="col-md-3 d-flex umkm-flex-center align-items-center">
                                         <i class="fa fa-map-marker fa-3x"></i>
                                     </div>
                                     <div class="col-md-9">
@@ -78,7 +78,7 @@
                             <hr>
                             <div class="card">
                                 <div class="row no-gutters">
-                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                    <div class="col-md-3 d-flex umkm-flex-center align-items-center">
                                         <i class="fa fa-inbox fa-3x"></i>
                                     </div>
                                     <div class="col-md-9">
