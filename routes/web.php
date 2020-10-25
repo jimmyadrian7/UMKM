@@ -14,14 +14,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('Login');
-});
-Route::get('/register', function () {
-    return view('Register');
-});
-
-
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         $data['active'] = 'dashboard'; 
@@ -98,9 +90,19 @@ Route::get('/get/popup/penjualan/terima_pesanan', function () {
     return view('penjual.popup.TerimaPesanan');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/encrypt/{id}', [HomeController::class, 'encrypt'])->name('encrypt');
-Route::get('/decrypt/{id}', [HomeController::class, 'decrypt'])->name('decrypt');
+Route::get('/testing', [HomeController::class, 'test'])->name('test');
+
+Route::get('/', function () {
+    return view('Login');
+});
+Route::get('/register', function () {
+    return view('Register');
+});
+
+Route::get('/', 'AuthController@index');
+Route::get('/register', 'AuthController@create');
+Route::post('/register/store','AuthController@store');

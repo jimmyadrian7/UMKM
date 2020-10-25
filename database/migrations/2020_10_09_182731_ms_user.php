@@ -22,6 +22,7 @@ class MsUser extends Migration
             $table->string('VerificationCode', 50);
             $table->enum('UserDriver', ['Active', 'Pending','Inactive', 'Determinate']);
             $table->enum('UserSeller', ['Active', 'Pending','Inactive', 'Determinate']);
+            $table->enum('UserStatus', ['Active', 'Pending','Inactive', 'Deleted']);
         });
     }
 

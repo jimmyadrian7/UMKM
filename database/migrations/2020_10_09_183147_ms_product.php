@@ -21,7 +21,6 @@ class MsProduct extends Migration
             $table->float('ProductStock');
             $table->double('ProductPrice');
             $table->string('ProductWeight', 50);
-            $table->string('StoreImage', 255);
             $table->unsignedBigInteger('CategoryId');
             $table->unsignedBigInteger('StoreId');
             $table->enum('StatusId', ['PO', 'Out Of Stock','Ready', 'Deleted']);

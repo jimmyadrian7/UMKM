@@ -11,7 +11,7 @@
             @csrf
             @method($mode)
             {{-- invisible input --}}
-            <input type="hidden" class="form-control" name="StoreId" value="2">
+            <input type="hidden" class="form-control" name="StoreId" value="3">
             <input type="hidden" class="form-control" name="ProductId" value="{{$data->ProductId ?? ''}}">
 
 

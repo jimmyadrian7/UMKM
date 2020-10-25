@@ -4,8 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Validator;
+use App\Services\PayUService\Exception;
+use Illuminate\Support\Str;
+use Helper;
+
 class HomeController extends Controller
 {
     /**
@@ -25,20 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-       // return view('home');
-    }
 
-    public function encrypt(Request $request, $id)
-    {
-        //
-        $test = Crypt::encryptString($id);
-        //echo Crypt::decryptString($test);
-        return redirect()->route('decrypt', ['id' => $test]);
     }
     
-    public function decrypt(Request $request, $id)
-    {
-        echo Crypt::decryptString($id);
-        //return redirect()->route('home', ['id' => $test]);
-    }
 }

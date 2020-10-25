@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
+use App\Services\PayUService\Exception;
 use Helper;
 
 class CrudController extends Controller
@@ -81,7 +83,7 @@ class CrudController extends Controller
             }
             $table->insert($data);
             // alert()->success('Data berhasil ditambahkan');
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             report($e);
             // Helper::ErrorHandler('Data gagal ditambahkan', $e->getMessage());
         }
@@ -138,7 +140,7 @@ class CrudController extends Controller
 
             $table->update($data);
             // alert()->success('Data berhasil diubah');
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             report($e);
             // Helper::ErrorHandler('Data gagal diubah', $e->getMessage());
         }
@@ -158,7 +160,7 @@ class CrudController extends Controller
             $table_name = $this->table_name;
             $table = DB::table($table_name)->where($this->table_id_name, $id)->delete();
             // alert()->success('Data berhasil dihapus');
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             // Helper::ErrorHandler('Data gagal dihapus', $e->getMessage());
         }
         
