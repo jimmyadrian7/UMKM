@@ -69,6 +69,7 @@ class AuthController extends Controller
                 'UserPassword' => Hash::make($request -> phone),
                 'UserDriver' => 'Inactive',
                 'UserSeller' => 'Inactive',
+                'UserStatus' => 'Inactive',
             ]);
 
         } catch (\Exception $e) {
