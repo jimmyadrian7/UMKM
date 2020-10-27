@@ -265,3 +265,8 @@ html, body {
 .bold {
 	font-weight: bold;
 }
+
+/*images*/
+.active img {
+	filter: invert(39%) sepia(57%) saturate(346%) hue-rotate(37deg) brightness(92%) contrast(83%);
+}

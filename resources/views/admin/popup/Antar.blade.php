@@ -25,7 +25,7 @@
 			</div>
 		</div> --}}
 		<div class="col-10 mt-3">
-			<button class="btn umkm-btn umkm-bg-black btn-block">Beritahu Driver</button>
+			<button class="btn umkm-btn umkm-btn-black btn-block">Beritahu Driver</button>
 		</div>
 	</div>
 </div>
