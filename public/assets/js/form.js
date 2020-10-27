@@ -4,4 +4,6 @@ $(function(){
 	
 	$('.umkm-range').ionRangeSlider();
 
+	$(":radio").labelauty({ icon: false, same_width: true });
+
 });

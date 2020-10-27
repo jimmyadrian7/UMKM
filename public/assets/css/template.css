@@ -270,3 +270,16 @@ html, body {
 .active img {
 	filter: invert(39%) sepia(57%) saturate(346%) hue-rotate(37deg) brightness(92%) contrast(83%);
 }
+
+/*radio*/
+.radio-style span {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+input.labelauty:checked + label {
+	background-color: black;
+}
+input.labelauty:checked:not([disabled]) + label:hover {
+	background-color: black;
+}
