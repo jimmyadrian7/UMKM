@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Middleware\AuthMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         $data['active'] = 'dashboard'; 
         return view('admin.Dashboard', $data);
-    });
+    })->middleware(AuthMiddleware::class);
 
 
     Route::get('/pesanan', function () {
@@ -106,3 +107,5 @@ Route::get('/register', function () {
 Route::get('/', 'AuthController@index');
 Route::get('/register', 'AuthController@create');
 Route::post('/register/store','AuthController@store');
+Route::post('/login','AuthController@login');
+Route::get('/logout','AuthController@logout');

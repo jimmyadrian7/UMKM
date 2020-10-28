@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use App\Services\PayUService\Exception;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+use App\Services\PayUService\Exception;
 use Helper;
 
 class AuthController extends Controller
@@ -66,7 +68,7 @@ class AuthController extends Controller
                 'UserName' => $request -> name,
                 'UserEmail' => $request -> email,
                 'VerificationCode' => $random,
-                'UserPassword' => Hash::make($request -> phone),
+                'UserPassword' => Hash::make($request -> password),
                 'UserDriver' => 'Inactive',
                 'UserSeller' => 'Inactive',
                 'UserStatus' => 'Inactive',
@@ -78,6 +80,42 @@ class AuthController extends Controller
             return redirect('/register')->with($data_view);
         }
 
+        return redirect('/');
+    }
+
+    public function login(Request $request){
+
+        $data_view['status'] = 'Password atau Email, Salah !';
+        $data_view['email'] = $request['email'];
+        $data_view['pass'] = $request['pass'];
+
+        $password = $request['pass'];
+
+        $data = DB::table('msuser')
+                ->where('UserEmail', '=', $request['email'])
+                ->where('UserStatus', '=', 'Active')
+                ->get()
+                ->first();;
+        
+
+        if($data){
+            if(Hash::check($password,$data->UserPassword)){
+                Session::put('UserData',$data);
+                Session::put('_token',$request['_token']);
+                return redirect('admin/dashboard');
+            }
+            else{
+                return redirect('/')->with($data_view);
+            }
+        }
+        else{
+            return redirect('/')->with($data_view);
+        }
+    }
+
+    public function logout(){
+        Session::put('UserData', null);
+        Session::put('_token', null);
         return redirect('/');
     }
 }
