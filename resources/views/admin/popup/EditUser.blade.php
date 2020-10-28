@@ -16,7 +16,7 @@
 			</select>
 		</div>
 		<div class="col-10 mb-3">
-			<button class="btn umkm-btn umkm-bg-black btn-block">EDIT</button>
+			<button class="btn umkm-btn umkm-btn-black btn-block">EDIT</button>
 		</div>
 	</div>
 </div>

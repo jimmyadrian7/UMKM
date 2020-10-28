@@ -14,9 +14,11 @@
         <link rel="stylesheet" href="{{ asset('/assets/css/font-awesome.min.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/select2.min.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/ion.rangeSlider.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('/assets/DataTables/datatables..min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/assets/DataTables/datatables.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/assets/jquery-labelauty-master/jquery-labelauty.css') }}">
         
         <link rel="stylesheet" href="{{ asset('/assets/css/template.css') }}">
+        @stack('styles')
 
         <!-- Script -->
         <script src="{{ asset('/assets/js/jquery.min.js') }}" defer="true"></script>
@@ -25,9 +27,11 @@
         <script src="{{ asset('/assets/js/select2.min.js') }}" defer="true"></script>
         <script src="{{ asset('/assets/js/ion.rangeSlider.min.js') }}" defer="true"></script>
         <script src="{{ asset('/assets/DataTables/datatables.min.js') }}" defer="true"></script>
+        <script src="{{ asset('/assets/jquery-labelauty-master/jquery-labelauty.js') }}" defer="true"></script>
 
         <script src="{{ asset('/assets/js/popup.js') }}" defer="true"></script>
         <script src="{{ asset('/assets/js/data.tables.js') }}" defer="true"></script>
+        @stack('scripts')
         
     </head>
     <body>

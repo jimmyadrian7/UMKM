@@ -1,5 +1,11 @@
 @extends('template.PenjualTemplate')
 
+@once
+    @push('scripts')
+        <script src="{{ asset('/assets/js/form.js') }}" defer="true"></script>
+    @endpush
+@endonce
+
 @section('content')
 
     <div class="mb-4 umkm-title">PENGATURAN</div>
@@ -23,8 +29,8 @@
                 <div class="mt-3">
                     <label for="">Status</label>
                     <div class="col-12">
-                        <button class="btn border px-5">Buka</button>
-                        <button class="btn border px-5">Tutup</button>
+                        <label class="radio-style"><input type="radio" name="status" id="status" value="buka" data-labelauty="Buka"></label>
+                        <label class="radio-style"><input type="radio" name="status" id="tutup" value="tutup" data-labelauty="Tutup"></label>
                     </div>
                 </div>
 
