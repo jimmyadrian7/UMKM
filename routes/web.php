@@ -91,6 +91,14 @@ Route::get('/get/popup/penjualan/terima_pesanan', function () {
     return view('penjual.popup.TerimaPesanan');
 });
 
+Route::prefix('pembeli')->group(function () {
+    Route::get('/', function () {
+        // $data['active'] = 'dashboard'; 
+        return view('pembeli.home');
+    });
+});
+
+
 //Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -92,6 +92,10 @@ html, body {
 	border-radius: 20px;
 }
 
+.umkm-rounded-top {
+	border-radius: 20px 20px 0 0;
+}
+
 .umkm-rounded .umkm-header {
 	border-radius: 20px 20px 0 0;
 }
@@ -141,6 +145,11 @@ html, body {
 .umkm-flex-center {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+}
+.umkm-flex-right {
+	display: flex;
+	justify-content: flex-end;
 	flex-wrap: wrap;
 }
 
@@ -240,6 +249,17 @@ html, body {
 	color: black;
 }
 
+.umkm-btn-kategori {
+	box-shadow: 0 .2rem 0.2rem rgba(0, 0, 0, 0.15) !important;
+	background-color: white;
+	border: 0;
+	border-radius: 1rem !important;
+	min-width: 100px;
+}
+.umkm-btn-kategori:active {
+	border: 0;
+}
+
 .dropdown .card {
 	border: 0px;
 	background-color: transparent;
@@ -282,4 +302,29 @@ input.labelauty:checked + label {
 }
 input.labelauty:checked:not([disabled]) + label:hover {
 	background-color: black;
+}
+
+.slick-list {
+	padding-top: 20px !important;
+}
+
+.slick-prev, .slick-next {
+	position: absolute;
+	z-index: 999;
+	border-radius: 30px;
+	padding: 10px 20px;
+	border: 0;
+	background-color: white;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+.slick-prev {
+	top: 45%;
+	left: 125px;
+	
+}
+
+.slick-next {
+	top: 45%;
+	right: 170px;
 }
