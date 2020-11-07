@@ -97,7 +97,6 @@ class AuthController extends Controller
                 ->get()
                 ->first();;
         
-
         if($data){
             if(Hash::check($password,$data->UserPassword)){
                 Session::put('UserData',$data);

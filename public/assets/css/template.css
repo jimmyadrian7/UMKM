@@ -328,3 +328,15 @@ input.labelauty:checked:not([disabled]) + label:hover {
 	top: 45%;
 	right: 170px;
 }
+
+.umkm-profile{
+	color: #000;
+	padding: 10px 0px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.umkm-profile:hover{
+	color: #fff;
+	background-color: #ADC965;
+}

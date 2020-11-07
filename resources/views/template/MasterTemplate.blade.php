@@ -37,15 +37,15 @@
     <body>
 
         <div class="container-fluid h-100 d-flex flex-column">
-
             <nav class="row navbar navbar-expand-lg umkm-bg-green d-flex justify-content-between align-items-center px-4 sticky-top">
-                <a href="navbar-brand" href="#">
+                <a class="navbar-brand" href="#">
                     <img src="{{ asset('/assets/images/icon/list_rotate.png') }}" alt="hamburger list" height="40">
                     <img src="{{ asset('/assets/images/logo.png') }}" alt="logo" height="40">
                 </a>
                 <div class="d-flex align-items-center col-4">
-                    <input type="text" name="search" class="form-control rounded-pill border-0" placeholder="search...">
+                    <input type="text" name="search" class="form-control rounded-pill border-0" placeholder="search..." value="">
                 </div>
+                @if (session('UserData'))
                 <div class="d-flex">
                     <div class="dropdown mr-2">
                         <button class="btn btn-default" data-toggle="dropdown" >
@@ -97,10 +97,53 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-default rounded-circle p-0">
+                    <button class="btn btn-default rounded-circle p-0" data-toggle="collapse" data-target=".profile">
                         <img src="{{ asset('/assets/images/pixie.jpg') }}" alt="profile picture" height="40" class="rounded-circle">
                     </button>
+                    <div class="dropdown-menu dropdown-menu-right umkm-rounded p-0 profile" style="width: 100px">
+                        <a href="#" class="text-decoration-none"><div class="umkm-profile">Profil</div></a>
+                    @if (session('UserData')->UserDriver == 'Active')
+                        <a href="#" class="text-decoration-none"><div class="umkm-profile">Driver</div></a>
+                    @endif
+                    @if (session('UserData')->UserSeller == 'Active')
+                        <a href="#" class="text-decoration-none"><div class="umkm-profile">Toko</div></a>
+                    @endif
+                        <a href="/logout" class="text-decoration-none"><div class="umkm-profile">Keluar</div></a>
+                        {{-- <div class="umkm-header bg-dark text-white p-2 text-center">Pemberitahuan</div> --}}
+                        {{-- <div class="card umkm-shadow">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body px-2">
+                                        <div class="card-title small">22 Januari 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
+                    </div>
                 </div>
+                @else
+                {{-- jika tidak ada session data login --}}
+                <div class="d-flex">
+                    <div class="dropdown mr-2">
+                        <button class="btn btn-default text-white font-weight-bold" data-toggle="dropdown" >
+                            Login
+                        </button>
+                        <form action="/login" method="post">
+                            @csrf
+                            <div class="dropdown-menu dropdown-menu-right umkm-rounded p-0" style="width: 300px">
+                                <div class="umkm-header bg-dark text-white p-2 text-center">Login</div>
+                                <div class="card">
+                                    <div class="row no-gutters">
+                                            <input class="form-control form-control rounded-8 mt-1" type="text" placeholder="Masukkan Email Anda" name="email">
+                                            <input class="form-control form-controlg rounded-8 mt-1" type="password" placeholder="Masukkan Password Anda" name="pass">
+                                            <button type="submit" class="btn umkm-bg-green btn-lg btn-block rounded-8 mt-1 text-white">MASUK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                @endif
             </nav>
 
             @yield('Parentcontent')

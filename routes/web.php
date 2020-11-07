@@ -91,14 +91,6 @@ Route::get('/get/popup/penjualan/terima_pesanan', function () {
     return view('penjual.popup.TerimaPesanan');
 });
 
-Route::prefix('pembeli')->group(function () {
-    Route::get('/', function () {
-        // $data['active'] = 'dashboard'; 
-        return view('pembeli.home');
-    });
-});
-
-
 //Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -117,3 +109,11 @@ Route::get('/register', 'AuthController@create');
 Route::post('/register/store','AuthController@store');
 Route::post('/login','AuthController@login');
 Route::get('/logout','AuthController@logout');
+
+Route::prefix('pembeli')->group(function () {
+    Route::get('/', 'buyerController@index');
+    // Route::get('/', function () {
+    //     // $data['active'] = 'dashboard'; 
+    //     return view('pembeli.home');
+    // });
+});
