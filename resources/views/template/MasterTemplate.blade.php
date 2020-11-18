@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="{{ asset('/assets/jquery-labelauty-master/jquery-labelauty.css') }}">
         
         <link rel="stylesheet" href="{{ asset('/assets/css/template.css') }}">
+        <link rel="stylesheet" href="{{ asset('/assets/css/custom.css') }}">
         @stack('styles')
 
         <!-- Script -->

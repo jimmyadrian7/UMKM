@@ -34,10 +34,11 @@ Route::prefix('admin')->group(function () {
     });
 
 
-    Route::get('/akses', function () {
-        $data['active'] = 'akses';
-        return view('admin.Akses', $data);
-    });
+    Route::get('/akses','adminController@akses');
+    
+    Route::post('/addBanner','adminController@addBanner');
+
+    Route::delete('/delBanner/{id}', 'adminController@delBanner');
 });
 
 // Popup
