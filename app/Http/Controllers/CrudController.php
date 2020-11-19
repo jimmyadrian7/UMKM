@@ -78,12 +78,12 @@ class CrudController extends Controller
             $table_name = $this->table_name;
             $table = DB::table($table_name);
             $data = [];
-            foreach ($request->except(['_token', '_method', 'id_record']) as $key => $value) {
+            foreach ($request->except(['_token', '_method', 'id_record','StoreImage']) as $key => $value) {
                 $data[$key] = $value;
             }
             $table->insert($data);
             // alert()->success('Data berhasil ditambahkan');
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             report($e);
             // Helper::ErrorHandler('Data gagal ditambahkan', $e->getMessage());
         }

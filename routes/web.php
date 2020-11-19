@@ -34,10 +34,11 @@ Route::prefix('admin')->group(function () {
     });
 
 
-    Route::get('/akses', function () {
-        $data['active'] = 'akses';
-        return view('admin.Akses', $data);
-    });
+    Route::get('/akses','adminController@akses');
+    
+    Route::post('/addBanner','adminController@addBanner');
+
+    Route::delete('/delBanner/{id}', 'adminController@delBanner');
 });
 
 // Popup
@@ -121,3 +122,11 @@ Route::get('/register', 'AuthController@create');
 Route::post('/register/store','AuthController@store');
 Route::post('/login','AuthController@login');
 Route::get('/logout','AuthController@logout');
+
+Route::prefix('pembeli')->group(function () {
+    Route::get('/', 'buyerController@index');
+    // Route::get('/', function () {
+    //     // $data['active'] = 'dashboard'; 
+    //     return view('pembeli.home');
+    // });
+});

@@ -50,15 +50,18 @@
             <div class="card-body">
                 <h4 class="nav-link">Kategori</h4>
                 <div class="d-flex flex-wrap mt-2">
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Alat Dapur</button>
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Bahan Pokok</button>
+                    @foreach ($categories as $item)
+                    <a href="#"><button class="btn umkm-btn-kategori mr-4 mb-3">{{$item->CategoryName}}</button></a>
+                    {{-- <a href="#"><button class="btn umkm-btn-kategori mr-4 mb-3">Alat Dapur</button></a> --}}
+                    {{-- <button class="btn umkm-btn-kategori mr-4 mb-3">Bahan Pokok</button>
                     <button class="btn umkm-btn-kategori mr-4 mb-3">Buah</button>
                     <button class="btn umkm-btn-kategori mr-4 mb-3">Daging</button>
                     <button class="btn umkm-btn-kategori mr-4 mb-3">Fashion</button>
                     <button class="btn umkm-btn-kategori mr-4 mb-3">Handphone</button>
                     <button class="btn umkm-btn-kategori mr-4 mb-3">Ikan</button>
                     <button class="btn umkm-btn-kategori mr-4 mb-3">Makanan & Minuman</button>
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Office & Stationary</button>
+                    <button class="btn umkm-btn-kategori mr-4 mb-3">Office & Stationary</button> --}}
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -68,8 +71,21 @@
         <div class="row mb-5">
             <h2 class="col-12 nav-link font-weight-bold">UMKM</h2>
             <div class="row">
-                @for ($i = 0; $i < 8; $i++)
-                    <a href="/pembeli/produk/detail" class="umkm-flex-center col-sm-3 mb-5 btn">
+                @foreach ($barang as $barang)
+                <a href="#" class="umkm-flex-center col-sm-3 mb-5 btn">
+                    <div class="card umkm-rounded border-0 shadow col-12 p-0">
+                        <div class="card-body p-0">
+                            <img src="{{asset('/assets/images/misini.jpg')}}" class="umkm-rounded-top w-100">
+                            <div class="px-3 py-4 text-dark text-left">
+                                <div class="mb-3">{{$barang->ProductName}}</div>
+                                <div>{{'Rp. ' . number_format(strval($barang->ProductPrice)) . ",-"}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                @endforeach
+                {{-- @for ($i = 0; $i < 8; $i++)
+                    <a href="#" class="umkm-flex-center col-sm-3 mb-5 btn">
                         <div class="card umkm-rounded border-0 shadow col-12 p-0">
                             <div class="card-body p-0">
                                 <img src="{{asset('/assets/images/misini.jpg')}}" class="umkm-rounded-top w-100">
@@ -77,7 +93,7 @@
                             </div>
                         </div>
                     </a>
-                @endfor
+                @endfor --}}
             </div>
             <div class="umkm-flex-right col-12">
                 <button class="btn btn-dark rounded-pill py-2 px-4">Lihat Lebih Banyak</button>

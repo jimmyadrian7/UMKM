@@ -41,7 +41,7 @@
                                 @foreach ($datas as $data)
                                     <tr>
                                         <td>
-                                            <img src="{{ asset($data->StoreImage) }}" alt="5 Packs Socks" height="50">
+                                            {{-- <img src="{{ asset($data->StoreImage) }}" alt="5 Packs Socks" height="50"> --}}
                                             {{$data->ProductName}}
                                         </td>
                                         <td> Rp.{{$data->ProductPrice}} </td>
