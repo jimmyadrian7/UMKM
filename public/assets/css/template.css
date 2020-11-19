@@ -328,3 +328,18 @@ input.labelauty:checked:not([disabled]) + label:hover {
 	top: 45%;
 	right: 170px;
 }
+
+.text-gray {
+	color: #cacaca;
+}
+
+.text-red {
+	color: red;
+}
+
+.umkm-btn-beli {
+	background-color: #d5d7d1;
+	color: white;
+	border-radius: 10px !important;
+	width: 200px;
+}

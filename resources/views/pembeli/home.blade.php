@@ -69,7 +69,7 @@
             <h2 class="col-12 nav-link font-weight-bold">UMKM</h2>
             <div class="row">
                 @for ($i = 0; $i < 8; $i++)
-                    <a href="#" class="umkm-flex-center col-sm-3 mb-5 btn">
+                    <a href="/pembeli/produk/detail" class="umkm-flex-center col-sm-3 mb-5 btn">
                         <div class="card umkm-rounded border-0 shadow col-12 p-0">
                             <div class="card-body p-0">
                                 <img src="{{asset('/assets/images/misini.jpg')}}" class="umkm-rounded-top w-100">
