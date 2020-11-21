@@ -59,8 +59,23 @@ class adminController extends Controller
     }
 
     public function delBanner($id){
-        DB::table('msbanner')
+
+        if($id <= 0){
+            return redirect('/admin/akses');
+        }
+
+        try {
+            DB::table('msbanner')
             ->where('BannerId',$id)
             ->update(['StatusId' => 'Deleted']);
+
+        } catch (\Exception $e) {
+            // $($request -> password.)
+            $data_view['status'] = $e->errorInfo[2];
+            return redirect('/admin/akses')->with($data_view);
+        }
+
+        return redirect('/admin/akses');
+
     }
 }
