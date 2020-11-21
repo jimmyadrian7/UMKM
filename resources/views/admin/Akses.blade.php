@@ -102,8 +102,8 @@
                         @foreach ($banner as $banner)
                         <div class="col-4 d-lg-block d-none banner-image umkm-rounded">
                             <img src="{{ asset($banner->BannerImage) }}" alt="Banner" class="w-100 h-100 umkm-rounded">
-                            <div class="delete-icon-banner" id="{{$banner->BannerId }}">
-                                <i class="fa fa-trash" id="{{$banner->BannerId }}"></i>
+                            <div class="delete-icon-banner" data-popup="admin/delete_banner/{{$banner->BannerId}}">
+                                <i class="fa fa-trash"></i>
                             </div>
                         </div>
                         @endforeach

@@ -40,6 +40,10 @@ Route::prefix('admin')->group(function () {
 
     Route::delete('/delBanner/{id}', 'adminController@delBanner');
 });
+//Pop Up Admin
+Route::get('/get/popup/admin/delete_banner/{id}', function ($id) {
+    return view('admin.popup.DeleteBanner', ['id' => $id]);
+});
 
 // Popup
 Route::get('/get/popup/admin/antar', function () {
