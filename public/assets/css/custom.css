@@ -17,10 +17,15 @@
 .banner-add{
     font-size: 60px;
     cursor: pointer;
+    min-width: 140px;
 }
 
 .banner-add:hover{
     background-color: #ADC965;
+}
+.banner-image{
+    min-width: 140px;
+    max-height: 140px;
 }
 .banner-image:hover .delete-icon-banner{
     display: block;
