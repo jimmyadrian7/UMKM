@@ -32,10 +32,13 @@ class buyerController extends Controller
                             ->get();
         
         $data['barang'] = DB::table('msproduct')
-                            ->limit(8)
+                            ->where('StatusId','Active')
                             ->inRandomOrder()
                             ->get();
-
+        $data['banner'] = DB::table('msbanner')
+                            ->where('StatusId','Active')
+                            ->limit(6)
+                            ->get();
                             // dd($data['barang']);
 
         return view('pembeli.home', $data);

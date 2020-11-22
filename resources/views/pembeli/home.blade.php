@@ -13,34 +13,13 @@
 
     <div class="mt-2 px-0 py-5" style="background-color: #e4dddd;">
         <div class="col-12 px-0 center">
-            @for ($i = 0; $i < 3; $i++)
+            @foreach ($banner as $banner)
                 <div class="card umkm-rounded mr-5 shadow">
-                    <div class="card-body py-0">
-                        <div class="row">
-                            <div class="col-sm-5 pl-5 py-5 small">
-                                <img src="{{asset('/assets/images/pixie.jpg')}}" width="100">
-                                <ul class="mt-2 pl-3">
-                                    <li>Cari barang kebutuhan</li>
-                                    <li>Cari dari pasar setempat agar hemat ongkir</li>
-                                    <li>Chat langsung dengan penjual melalui whatsapp</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-2">
-                                <img src="{{asset('/assets/images/pixie.jpg')}}" width="100" class="mt-4">
-                            </div>
-                            <div class="col-sm-5 small umkm-flex-right">
-                                <div class="col-12 text-right">
-                                    <img src="{{asset('/assets/images/pixie.jpg')}}" width="100" class="pull-right">
-                                </div>
-                                <ul class="mt-2 pl-3">
-                                    <li>Menawarkan barang dan harga dengan pembeli</li>
-                                    <li>Langsung Pick-up jasa antar barang</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="card-body py-0 home-banner">
+                        <img src="{{$banner->BannerImage}}" class="w-100">
                     </div>
                 </div>
-            @endfor
+            @endforeach
         </div>
     </div>
 
@@ -50,18 +29,24 @@
             <div class="card-body">
                 <h4 class="nav-link">Kategori</h4>
                 <div class="d-flex flex-wrap mt-2">
-                    @foreach ($categories as $item)
-                    <a href="#"><button class="btn umkm-btn-kategori mr-4 mb-3">{{$item->CategoryName}}</button></a>
-                    {{-- <a href="#"><button class="btn umkm-btn-kategori mr-4 mb-3">Alat Dapur</button></a> --}}
-                    {{-- <button class="btn umkm-btn-kategori mr-4 mb-3">Bahan Pokok</button>
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Buah</button>
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Daging</button>
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Fashion</button>
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Handphone</button>
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Ikan</button>
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Makanan & Minuman</button>
-                    <button class="btn umkm-btn-kategori mr-4 mb-3">Office & Stationary</button> --}}
-                    @endforeach
+                    @if ($categories->count() > 0)
+                        @foreach ($categories as $item)
+                        <a href="#"><button class="btn umkm-btn-kategori mr-4 mb-3">{{$item->CategoryName}}</button></a>
+                        {{-- <a href="#"><button class="btn umkm-btn-kategori mr-4 mb-3">Alat Dapur</button></a> --}}
+                        {{-- <button class="btn umkm-btn-kategori mr-4 mb-3">Bahan Pokok</button>
+                        <button class="btn umkm-btn-kategori mr-4 mb-3">Buah</button>
+                        <button class="btn umkm-btn-kategori mr-4 mb-3">Daging</button>
+                        <button class="btn umkm-btn-kategori mr-4 mb-3">Fashion</button>
+                        <button class="btn umkm-btn-kategori mr-4 mb-3">Handphone</button>
+                        <button class="btn umkm-btn-kategori mr-4 mb-3">Ikan</button>
+                        <button class="btn umkm-btn-kategori mr-4 mb-3">Makanan & Minuman</button>
+                        <button class="btn umkm-btn-kategori mr-4 mb-3">Office & Stationary</button> --}}
+                        @endforeach
+                    @else
+                        <div class="text-muted">
+                            Maaf tidak ada kategori yang tersedia
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -84,20 +69,20 @@
                     </div>
                 </a>
                 @endforeach
-                {{-- @for ($i = 0; $i < 8; $i++)
-                    <a href="#" class="umkm-flex-center col-sm-3 mb-5 btn">
-                        <div class="card umkm-rounded border-0 shadow col-12 p-0">
-                            <div class="card-body p-0">
-                                <img src="{{asset('/assets/images/misini.jpg')}}" class="umkm-rounded-top w-100">
-                                <div class="px-3 py-4 text-dark">ES KRIM MISINI</div>
-                            </div>
-                        </div>
-                    </a>
-                @endfor --}}
             </div>
-            <div class="umkm-flex-right col-12">
-                <button class="btn btn-dark rounded-pill py-2 px-4">Lihat Lebih Banyak</button>
-            </div>
+            @if ($barang->count() == 8)
+                <div class="umkm-flex-right col-12">
+                    <button class="btn btn-dark rounded-pill py-2 px-4">Lihat Lebih Banyak</button>
+                </div>
+            @endif
+            
+            @if($barang->count() >= 0)
+                <div class="col-12">
+                    <div class="col-12 text-muted">
+                        Maaf tidak ada produk yang tersedia
+                    </div>
+                </div>
+            @endif
         </div>
 
         <hr class="border-dark">
