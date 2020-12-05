@@ -101,6 +101,10 @@ Route::prefix('pembeli')->group(function () {
         // $data['active'] = 'dashboard'; 
         return view('pembeli.home');
     });
+    Route::get('/kategori', function () {
+        // $data['active'] = 'dashboard'; 
+        return view('pembeli.kategori');
+    });
     Route::get('/produk/detail', function () {
         // $data['active'] = 'dashboard'; 
         return view('pembeli.detail');

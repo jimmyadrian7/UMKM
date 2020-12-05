@@ -1,0 +1,40 @@
+/*Font*/
+* {
+	font-family: Roboto;
+}
+
+.umkm-big-text {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.umkm-title {
+	font-weight: bold;
+	font-size: 40px;
+}
+.umkm-subtitle {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+.bold {
+	font-weight: bold;
+}
+
+.uppsercase {
+	text-transform: uppercase;
+}
+
+
+.text-gray {
+	color: #cacaca;
+}
+
+.text-green {
+	color: #9DBB81;
+}
+
+.text-red {
+	color: red;
+}

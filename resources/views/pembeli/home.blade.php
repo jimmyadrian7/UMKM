@@ -14,7 +14,7 @@
     <div class="mt-2 px-0 py-5" style="background-color: #e4dddd;">
         <div class="col-12 px-0 center">
             @foreach ($banner as $banner)
-                <div class="card umkm-rounded mr-5 shadow">
+                <div class="card umkm-rounded mr-5 umkm-shadow">
                     <div class="card-body py-0 home-banner">
                         <img src="{{$banner->BannerImage}}" class="w-100">
                     </div>
@@ -31,7 +31,7 @@
                 <div class="d-flex flex-wrap mt-2">
                     @if ($categories->count() > 0)
                         @foreach ($categories as $item)
-                        <a href="#"><button class="btn umkm-btn-kategori mr-4 mb-3">{{$item->CategoryName}}</button></a>
+                        <a href="/pembeli/kategori" class="btn umkm-btn-kategori mr-4 mb-3">{{$item->CategoryName}}</a>
                         {{-- <a href="#"><button class="btn umkm-btn-kategori mr-4 mb-3">Alat Dapur</button></a> --}}
                         {{-- <button class="btn umkm-btn-kategori mr-4 mb-3">Bahan Pokok</button>
                         <button class="btn umkm-btn-kategori mr-4 mb-3">Buah</button>
@@ -72,7 +72,7 @@
             </div>
             @if ($barang->count() == 8)
                 <div class="umkm-flex-right col-12">
-                    <button class="btn btn-dark rounded-pill py-2 px-4">Lihat Lebih Banyak</button>
+                    <button class="btn umkm-btn-primary py-2 px-4">Lihat Lebih Banyak</button>
                 </div>
             @endif
             
@@ -92,7 +92,7 @@
             <h2 class="col-12 nav-link font-weight-bold">Produk Terlaris</h2>
             <div class="row">
                 @for ($i = 0; $i < 4; $i++)
-                    <a href="#" class="umkm-flex-center col-sm-3 mb-5 btn">
+                    <a href="/pembeli/produk/detail" class="umkm-flex-center col-sm-3 mb-5 btn">
                         <div class="card umkm-rounded border-0 shadow col-12 p-0">
                             <div class="card-body p-0">
                                 <img src="{{asset('/assets/images/misini.jpg')}}" class="umkm-rounded-top w-100">
