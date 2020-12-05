@@ -260,6 +260,18 @@ html, body {
 	border: 0;
 }
 
+.umkm-btn-gray {
+	background-color: #dfe1db;
+	color: black;
+}
+
+.umkm-btn-beli {
+	background-color: #ADC965;
+	color: white;
+	border-radius: 10px !important;
+	width: 200px;
+}
+
 .dropdown .card {
 	border: 0px;
 	background-color: transparent;
@@ -345,13 +357,27 @@ input.labelauty:checked:not([disabled]) + label:hover {
 	color: #cacaca;
 }
 
+.text-green {
+	color: #ADC965;
+}
+
 .text-red {
 	color: red;
 }
 
-.umkm-btn-beli {
-	background-color: #d5d7d1;
-	color: white;
-	border-radius: 10px !important;
-	width: 200px;
+.umkm-border-bottom {
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid #ced4da !important;
+}
+
+.umkm-text-jumlah {
+	font-weight: bold;
+	text-align: center;
+	width: 20%;
+	border: 0;
+	border-bottom: 1px solid #ced4da !important;
+	border-radius: 0;
+	margin: 0 1rem !important;
 }

@@ -10,7 +10,7 @@
 		</div>
 		<div class="col-9 mb-3 umkm-flex-between">
 			<button class="btn umkm-btn umkm-btn-black px-5">REMOVE</button>
-			<button class="btn umkm-btn umkm-btn-black px-5">CANCEL</button>
+			<button class="btn umkm-btn umkm-btn-black px-5" data-dismiss="modal">CANCEL</button>
 		</div>
 	</div>
 </div>

@@ -70,7 +70,8 @@
                 left: imageW + paras.marginL,
                 top: paras.marginT,
                 width: paras.showPanelW,
-                height: paras.showPanelH
+                height: paras.showPanelH,
+                zIndex: 999999999
             }).append(img);
 
             self.append(layer).append(showPanel);

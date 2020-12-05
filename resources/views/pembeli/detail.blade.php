@@ -7,6 +7,7 @@
 @push('scripts')
     <script type="text/javascript" src="{{ asset('/assets/Product-Gallery-Image-Zoom/scripts/zoom-image.js') }}" defer></script>
     <script type="text/javascript" src="{{ asset('/assets/Product-Gallery-Image-Zoom/scripts/main.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('/assets/js/input.js') }}" defer></script>
 @endpush
 
 @section('content')
@@ -55,15 +56,16 @@
             </div>
 
             <div class="col-md-7">
-                <h6 class="mb-3">KEDAI CINCAOE VAN JAVA</h6>
-                <h2 class="font-weight-bold">CINCAOE BIASA</h2>
+                <h5 class="text-green font-weight-bold">KEDAI CINCAOE VAN JAVA</h5>
+                <div class="small text-muted">Perumahan sumberingin indah Blok B-4 Kec Karangan</div>
+                <h2 class="font-weight-bold py-4">CINCAOE BIASA</h2>
                 
                 <hr class="border-dark">
 
                 <div class="row">
                     <div class="mt-4 col-7">
-                        <div class="text-gray">HARGA</div>
-                        <h3 class="text-red text-center">Rp. 5000,-</h3>
+                        <div class="text-green font-weight-bold">HARGA</div>
+                        <h3 class="">Rp. 5000,-</h3>
                     </div>
                 </div>
 
@@ -71,8 +73,13 @@
 
                 <div class="row mt-4 umkm-flex-center">
                     <div class="col-7">
-                        <div class="text-gray">JUMLAH</div>
-                        <h3 class="text-red text-center">Rp. 5000,-</h3>
+                        <div class="text-green font-weight-bold">JUMLAH</div>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn umkm-btn-gray btn-remove rounded-circle"><i class="fa fa-minus"></i></button>
+                            <input type="text" name="jumlah" class="form-control umkm-text-jumlah" value="1">
+                            <button class="btn umkm-bg-green btn-add text-white rounded-circle"><i class="fa fa-plus"></i></button>
+                        </div>
+                        <div class="text-green font-italic text-center mt-2">Pembelian Minimal 1 Pcs</div>
                     </div>
                     <div class="col-5 align-items-center d-flex justify-content-end">
                         <button class="btn umkm-btn-beli">Beli Sekarang</button>
