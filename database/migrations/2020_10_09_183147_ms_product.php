@@ -23,10 +23,14 @@ class MsProduct extends Migration
             $table->string('ProductWeight', 50);
             $table->unsignedBigInteger('CategoryId');
             $table->unsignedBigInteger('StoreId');
-            $table->enum('StatusId', ['PO', 'Out Of Stock','Ready', 'Deleted']);
+            $table->enum('StatusId', ['PO', 'Out Of Stock','Ready', 'Deleted'])->default('Ready');
             $table->foreign('CategoryId')->references('CategoryId')->on('MsCategories');
             $table->foreign('StoreId')->references('StoreId')->on('MsStore');
-        });   
+        });
+
+        Schema::table('MsProduct', function (Blueprint $table) {
+            $table->unique(['ProductName','StoreId']);
+        });
     }
 
     /**

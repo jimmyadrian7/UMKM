@@ -21,7 +21,7 @@ class MsTransaction extends Migration
             $table->double('TransactionDiscount');
             $table->timestamp('TransactionDate', 0);
             $table->unsignedBigInteger('UserId');
-            $table->enum('StatusId', ['Pending','Decline','Accept']);
+            $table->enum('StatusId', ['Pending','Decline','Accept'])->default('Pending');
             $table->foreign('UserId')->references('UserId')->on('MsUser');
         });   
     }

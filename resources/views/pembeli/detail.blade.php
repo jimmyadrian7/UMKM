@@ -14,7 +14,7 @@
 
     <div class="container">
         
-        <div class="umkm-shadow my-5 card umkm-rounded border-0">
+        <!-- <div class="umkm-shadow my-5 card umkm-rounded border-0">
             <div class="card-body">
                 <h4 class="nav-link">Kategori</h4>
                 <div class="d-flex flex-wrap mt-2">
@@ -29,9 +29,9 @@
                     <a href="/pembeli/kategori" class="btn umkm-btn-kategori mr-4 mb-3">Office & Stationary</a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <hr class="umkm-border-green">
+        <!-- <hr class="umkm-border-green"> -->
 
         <div class="row py-5">
             <div class="col-md-5">
@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            <div class="col-md-7">
+            <div class="col-md-7"> 
                 <h5 class="text-green font-weight-bold">KEDAI CINCAOE VAN JAVA</h5>
                 <div class="small text-muted">Perumahan sumberingin indah Blok B-4 Kec Karangan</div>
                 <h2 class="font-weight-bold py-4">CINCAOE BIASA</h2>

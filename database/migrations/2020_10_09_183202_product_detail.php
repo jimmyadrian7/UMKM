@@ -13,7 +13,7 @@ class ProductDetail extends Migration
      */
     public function up()
     {
-        //Harusnya belum dipakai
+        //Harusnya belum dipakai for variant
         Schema::create('ProductDetail', function (Blueprint $table) {
             $table->unsignedBigInteger('ProductId');
             $table->string('ProductType', 255);

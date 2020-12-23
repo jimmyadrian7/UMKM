@@ -57,7 +57,7 @@
             <h2 class="col-12 nav-link font-weight-bold">UMKM</h2>
             <div class="row">
                 @foreach ($barang as $barang)
-                <a href="#" class="umkm-flex-center col-sm-3 mb-5 btn">
+                <a href="/pembeli/produk/{{urlencode($barang->StoreName)}}/{{urlencode($barang->ProductName)}}" class="umkm-flex-center col-sm-3 mb-5 btn">
                     <div class="card umkm-rounded border-0 shadow col-12 p-0">
                         <div class="card-body p-0">
                             <img src="{{asset('/assets/images/misini.jpg')}}" class="umkm-rounded-top w-100">
@@ -70,13 +70,13 @@
                 </a>
                 @endforeach
             </div>
-            @if ($barang->count() == 8)
+            @if ($countBarang == 8)
                 <div class="umkm-flex-right col-12">
                     <button class="btn umkm-btn-primary py-2 px-4">Lihat Lebih Banyak</button>
                 </div>
             @endif
             
-            @if($barang->count() >= 0)
+            @if($countBarang <= 0)
                 <div class="col-12">
                     <div class="col-12 text-muted">
                         Maaf tidak ada produk yang tersedia

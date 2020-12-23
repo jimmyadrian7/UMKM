@@ -105,7 +105,7 @@ Route::prefix('pembeli')->group(function () {
         // $data['active'] = 'dashboard'; 
         return view('pembeli.kategori');
     });
-    Route::get('/produk/detail', function () {
+    Route::get('/produk/{store}/{product}', function () {
         // $data['active'] = 'dashboard'; 
         return view('pembeli.detail');
     });

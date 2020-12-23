@@ -22,4 +22,5 @@ class ProductController extends CrudController
             'categories' => DB::table('mscategories')->get()
         ];
     }
+    
 }

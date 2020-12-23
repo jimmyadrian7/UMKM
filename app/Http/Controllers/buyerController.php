@@ -32,15 +32,17 @@ class buyerController extends Controller
                             ->get();
         
         $data['barang'] = DB::table('msproduct')
-                            ->where('StatusId','Active')
+                            ->join('msstore', 'msproduct.StoreId', '=', 'msstore.StoreId')
+                            ->where('msproduct.StatusId','Ready')
+                            ->orWhere('msproduct.StatusId','PO')
                             ->inRandomOrder()
                             ->get();
         $data['banner'] = DB::table('msbanner')
                             ->where('StatusId','Active')
                             ->limit(6)
                             ->get();
-                            // dd($data['barang']);
-
+        $data['countBarang'] = $data['barang']->count();
+        
         return view('pembeli.home', $data);
     }
 }

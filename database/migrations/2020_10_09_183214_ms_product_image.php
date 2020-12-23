@@ -18,7 +18,7 @@ class MsProductImage extends Migration
             $table->bigIncrements('ProductImageId');
             $table->unsignedBigInteger('ProductId');
             $table->string('ProductImage', 255);
-            $table->enum('StatusId', ['Active','Deleted']);
+            $table->enum('StatusId', ['Active','Deleted'])->default('Active');
             $table->foreign('ProductId')->references('ProductId')->on('MsProduct');
         });   
     }

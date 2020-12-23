@@ -23,7 +23,7 @@ class MsStore extends Migration
             $table->time('StoreClosedHour', 0);
             $table->unsignedBigInteger('UserId');
             $table->string('StoreImage', 255);
-            $table->enum('StatusId', ['Active', 'Inactive','Deleted', 'Closed']);
+            $table->enum('StatusId', ['Active', 'Inactive','Deleted', 'Closed'])->default('Inactive');
             $table->foreign('UserId')->references('UserId')->on('MsUser');
         });        
     }

@@ -19,7 +19,7 @@ class UserAddr extends Migration
             $table->unsignedBigInteger('CityId');
             $table->longText('UserAddress');
             $table->string('ContactNumber', 50);
-            $table->enum('StatusId', ['Active', 'Inactive','Deleted', 'Closed']);
+            $table->enum('StatusId', ['Active', 'Inactive','Deleted', 'Closed'])->default('Active');
             $table->foreign('CityId')->references('CityId')->on('MsCity');
         });
     }
