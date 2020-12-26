@@ -45,4 +45,33 @@ class buyerController extends Controller
         
         return view('pembeli.home', $data);
     }
+
+    public function detail_product($store, $product){
+        // urldecode
+        $product = DB::table('msproduct')
+                    ->join('msstore', 'msproduct.StoreId', '=', 'msstore.StoreId')
+                    ->where('msproduct.StatusId','Ready')
+                    ->where('msproduct.ProductName',urldecode($product))
+                    ->where('msstore.StoreName',urldecode($store))
+                    ->limit(1)
+                    ->get();
+
+        $data['detail'] = $product[0];
+
+        // echo $product;
+
+        if($product->count() == 1){
+            $data['image'] = DB::table('msproductimage')
+                    ->where('ProductId', $product[0]->ProductId)
+                    ->where('StatusId','Active')
+                    ->get();
+
+            if($data['image']->count() <= 0){
+                return redirect('/');        
+            }
+        }else{
+            return redirect('/');
+        }
+        return view('pembeli.detail', $data);
+    }
 }

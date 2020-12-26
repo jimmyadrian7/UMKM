@@ -97,18 +97,21 @@ Route::get('/get/popup/penjualan/terima_pesanan', function () {
 });
 
 Route::prefix('pembeli')->group(function () {
-    Route::get('/', function () {
-        // $data['active'] = 'dashboard'; 
-        return view('pembeli.home');
-    });
+    Route::get('/', 'buyerController@index');
+    // Route::get('/', function () {
+    //     // $data['active'] = 'dashboard'; 
+    //     return view('pembeli.home');
+    // });
     Route::get('/kategori', function () {
         // $data['active'] = 'dashboard'; 
         return view('pembeli.kategori');
     });
-    Route::get('/produk/{store}/{product}', function () {
-        // $data['active'] = 'dashboard'; 
-        return view('pembeli.detail');
-    });
+    // Route::get('/produk/{store}/{product}', function () {
+    //     // $data['active'] = 'dashboard'; 
+    //     return view('pembeli.detail');
+    // });
+    
+    Route::get('/produk/{store}/{product}', 'buyerController@detail_product');
 });
 
 
@@ -131,10 +134,3 @@ Route::post('/register/store','AuthController@store');
 Route::post('/login','AuthController@login');
 Route::get('/logout','AuthController@logout');
 
-Route::prefix('pembeli')->group(function () {
-    Route::get('/', 'buyerController@index');
-    // Route::get('/', function () {
-    //     // $data['active'] = 'dashboard'; 
-    //     return view('pembeli.home');
-    // });
-});

@@ -36,18 +36,21 @@
         <div class="row py-5">
             <div class="col-md-5">
                 <div class="container">
-                    <div class="show" href="{{asset('/assets/images/misini.jpg')}}">
-                        <img src="{{asset('/assets/images/misini.jpg')}}" class="border-0 umkm-rounded" id="show-img">
+                    <div class="show" href="{{asset($image[0]->ProductImage)}}">
+                        <img src="{{asset($image[0]->ProductImage)}}" class="border-0 umkm-rounded" id="show-img">
                     </div>
                     <div class="small-img">
                         <i class="fa fa-chevron-right icon-left" id="prev-img"></i>
                         <div class="small-container">
                             <div id="small-img-roll">
-                                <img src="{{asset('/assets/images/misini.jpg')}}" class="show-small-img border-0 umkm-rounded" alt="">
+                                @foreach ($image as $re)
+                                    <img src="{{asset($re->ProductImage)}}" class="show-small-img border-0 umkm-rounded" alt="">
+                                @endforeach
+                                {{-- <img src="{{asset('/assets/images/misini.jpg')}}" class="show-small-img border-0 umkm-rounded" alt="">
                                 <img src="{{asset('/assets/images/pixie.jpg')}}" class="show-small-img border-0 umkm-rounded" alt="">
                                 <img src="{{asset('/assets/images/misini.jpg')}}" class="show-small-img border-0 umkm-rounded" alt="">
                                 <img src="{{asset('/assets/images/sock.jpg')}}" class="show-small-img border-0 umkm-rounded" alt="">
-                                <img src="{{asset('/assets/images/misini.jpg')}}" class="show-small-img border-0 umkm-rounded" alt="">
+                                <img src="{{asset('/assets/images/misini.jpg')}}" class="show-small-img border-0 umkm-rounded" alt=""> --}}
                             </div>
                         </div>
                         <i class="fa fa-chevron-right icon-right" id="next-img"></i>
@@ -56,16 +59,16 @@
             </div>
 
             <div class="col-md-7"> 
-                <h5 class="text-green font-weight-bold">KEDAI CINCAOE VAN JAVA</h5>
-                <div class="small text-muted">Perumahan sumberingin indah Blok B-4 Kec Karangan</div>
-                <h2 class="font-weight-bold py-4">CINCAOE BIASA</h2>
+                <h5 class="text-green font-weight-bold">{{$detail->StoreName}}</h5>
+                <div class="small text-muted">{{$detail->UserAddress}}</div>
+                <h2 class="font-weight-bold py-4">{{$detail->ProductName}}</h2>
                 
                 <hr class="border-dark">
 
                 <div class="row">
                     <div class="mt-4 col-7">
                         <div class="text-green font-weight-bold">HARGA</div>
-                        <h3 class="">Rp. 5000,-</h3>
+                        <h3 class="">Rp. {{number_format($detail->ProductPrice,0,',','.')}},-</h3>
                     </div>
                 </div>
 
@@ -92,18 +95,7 @@
         <h4 class="bold mt-4">Deskripsi Produk</h4>
         <hr class="umkm-border-light-green">
         <p class="mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            {{$detail->ProductDesc}}
         </p>
 
         <hr class="umkm-border-green">
