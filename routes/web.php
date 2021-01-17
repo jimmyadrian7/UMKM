@@ -106,6 +106,7 @@ Route::prefix('pembeli')->group(function () {
         // $data['active'] = 'dashboard'; 
         return view('pembeli.kategori');
     });
+    
     // Route::get('/produk/{store}/{product}', function () {
     //     // $data['active'] = 'dashboard'; 
     //     return view('pembeli.detail');
@@ -127,7 +128,9 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('Register');
 });
-
+Route::get('/404', function () {
+    return view('template.404Template');
+});
 Route::get('/', 'AuthController@index');
 Route::get('/register', 'AuthController@create');
 Route::post('/register/store','AuthController@store');
