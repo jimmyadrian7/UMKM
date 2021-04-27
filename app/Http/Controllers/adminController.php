@@ -37,6 +37,7 @@ class adminController extends Controller
             ]);
 
             $banner->move($path,$banner->hashName());
+            
 
         } catch (\Exception $e) {
             // $($request -> password.)
